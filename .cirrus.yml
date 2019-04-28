@@ -1,4 +1,7 @@
 task:
-  container:
-    image: ponylang/ponyc-ci:cross-llvm-7.0.1-arm
-  whoami_script: whoami
+  windows_container:
+    image: cirrusci/windowsservercore:cmake
+    os_version: 2019
+  env:
+    CIRRUS_SHELL: "C:\tools\cygwin\bin\bash.exe"
+  script: whoami
