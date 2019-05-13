@@ -1,2 +1,2 @@
 # public-playground
-Playground for testing things
+Playground for testing things like manual tasks
