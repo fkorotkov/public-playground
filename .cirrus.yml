@@ -1,4 +1,12 @@
-task:
+foo_task:
   container:
-    image: ponylang/ponyc-ci:cross-llvm-7.0.1-arm
-  whoami_script: whoami
+    image: alpine:latest
+  script: echo "Foo"
+
+bar_task:
+  depends_on: foo
+  trigger_type: manual
+  container:
+    image: alpine:latest
+  script: echo "Bar"
+
