@@ -1,4 +1,4 @@
 task:
   container:
-    image: ponylang/ponyc-ci:cross-llvm-7.0.1-arm
-  whoami_script: whoami
+    image: alpine:latest
+  script: echo "Hello!"
