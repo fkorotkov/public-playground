@@ -1,10 +1,11 @@
-foo_task:
+build_task:
   container:
     image: alpine:latest
   script: echo "Foo"
 
-bar_task:
-  depends_on: foo
+task:
+  name: Deploy to Staging
+  depends_on: build
   trigger_type: manual
   container:
     image: alpine:latest
