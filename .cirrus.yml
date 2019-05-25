@@ -1,6 +1,7 @@
 freebsd13_task:
   freebsd_instance:
     image: freebsd-12-0-release-amd64
+  ip_script: curl -s http://whatismyip.akamai.com/
   script:
     - pw useradd --system --uid 1000 --shell /bin/bash --create-home cirrus
     - adduser cirrus sudo
