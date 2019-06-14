@@ -1,4 +1,9 @@
-task:
-  container:
-    image: alpine:latest
-  script: echo "Hello!"
+pipe:
+  name: "Build and Validate Links"
+  steps:
+    - image: alpine:3.8.4
+      install_script: echo 'Install'
+      build_script: echo 'Build'
+      validate_before_script: cat /etc/alpine-release
+    - image: alpine:3.9.4
+      validate_after_script: cat /etc/alpine-release
