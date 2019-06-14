@@ -2,8 +2,10 @@ pipe:
   name: "Build and Validate Links"
   steps:
     - image: alpine:3.8.4
-      install_script: echo 'Install'
-      build_script: echo 'Build'
       validate_before_script: cat /etc/alpine-release
+      create_script: echo 'Install' > foo.txt
+      ls_before_script: ls
     - image: alpine:3.9.4
       validate_after_script: cat /etc/alpine-release
+      ls_after_script: ls
+      cat_script: cat foo.txt
