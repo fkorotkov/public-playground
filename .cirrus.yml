@@ -1,4 +1,9 @@
 task:
   container:
     image: alpine:latest
-  script: echo "Hello!"
+  script: |
+    for i in $(seq 1 300)
+    do
+       echo "Welcome $i times"
+       sleep 1
+    done
