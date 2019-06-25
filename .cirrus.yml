@@ -2,3 +2,4 @@ task:
   container:
     image: smartrent/elixir-ci:1.8.1
   whoami_script: whoami
+  sleep_script: sleep 120
