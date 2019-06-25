@@ -1,4 +1,4 @@
 task:
   container:
-    image: alpine:latest
-  script: echo "Hello!"
+    image: smartrent/elixir-ci:1.8.1
+  whoami_script: whoami
