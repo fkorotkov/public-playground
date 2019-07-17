@@ -1,5 +1,5 @@
 task:
   freebsd_instance:
     matrix:
-      image: freebsd-11-3-release-amd64
+      image: freebsd-13-0-current-amd64-v20190712
   echo_script: echo $HOME 
