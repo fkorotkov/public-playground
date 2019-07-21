@@ -1,4 +1,4 @@
 task:
-  container:
-    image: alpine:latest
-  script: echo "Hello!"
+  windows_container:
+    image: cirrusci/windowsservercore:cmake
+  printenv: C:\tools\msys64\usr\bin\bash -lc 'printenv'
