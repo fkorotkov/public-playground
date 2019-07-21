@@ -1,4 +1,5 @@
 task:
   windows_container:
     image: cirrusci/windowsservercore:cmake
+    os_version: 2019
   printenv_script: C:\tools\msys64\usr\bin\bash -lc 'printenv'
