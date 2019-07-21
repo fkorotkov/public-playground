@@ -1,4 +1,5 @@
 task:
   container:
-    image: alpine:latest
-  script: echo "Hello!"
+    image: python:latest
+  timeout_in: 1m
+  script: python -m SimpleHTTPServer 13215
