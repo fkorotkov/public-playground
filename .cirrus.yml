@@ -1,5 +1,5 @@
 task:
   container:
-    image: python:latest
+    image: trinitronx/python-simplehttpserver:latest
   timeout_in: 1m
   script: python -m SimpleHTTPServer 13215
