@@ -9,4 +9,4 @@ task:
   trigger_type: manual
   container:
     image: alpine:latest
-  bar_script: echo "Bar"
+  deploy_script: echo "Bar"
