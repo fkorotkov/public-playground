@@ -10,4 +10,3 @@ task:
   container:
     image: alpine:latest
   script: echo "Bar"
-
