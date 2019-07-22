@@ -1,7 +1,7 @@
 build_task:
   container:
     image: alpine:latest
-  script: echo "Foo"
+  foo_script: echo "Foo"
 
 task:
   name: Deploy to Staging
@@ -9,4 +9,4 @@ task:
   trigger_type: manual
   container:
     image: alpine:latest
-  script: echo "Bar"
+  bar_script: echo "Bar"
