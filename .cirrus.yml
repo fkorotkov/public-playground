@@ -2,4 +2,4 @@ task:
   name: do-stuff
   container:
     image: alpine:latest
-  script: echo "Hello!"
+  script: sleep 30
