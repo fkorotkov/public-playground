@@ -1,6 +1,9 @@
 container:
   image: alpine:latest
 
+env:
+  somethingelse: haha  
+
 otherEnv: &otherEnv
   foo: baz
 
