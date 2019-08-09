@@ -1,5 +1,7 @@
 task:
+  env:
+    CIRRUS_SHELL: C:\tools\msys64\usr\bin\bash
   windows_container:
     image: cirrusci/windowsservercore:cmake
     os_version: 2019
-  printenv_script: bash -lc 'printenv'
+  printenv_script: printenv
