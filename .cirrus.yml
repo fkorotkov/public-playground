@@ -1,5 +1,2 @@
-task:
-  name: do-stuff
-  container:
-    image: alpine:latest
-  script: echo "Hello!"
+docker_builder:
+  script: curl -s http://whatismyip.akamai.com/
