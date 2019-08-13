@@ -1,5 +1,9 @@
 task:
-  name: do-stuff
+  matrix
+    name: foo
+    name: bar
   container:
     image: alpine:latest
-  script: echo "Hello!"
+    cpu: 0.2
+    memory: 256Mb
+  script: exit 1
