@@ -1,5 +1,10 @@
 task:
-  name: do-stuff
   container:
     image: alpine:latest
-  script: echo "Hello!"
+    cpu: 0.5
+    memory: 256Mb
+  env:
+    USING_CWD: $CIRRUS_WORKING_DIR/something
+  test_script:
+    - echo $CIRRUS_WORKING_DIR
+    - echo $USING_CWD
