@@ -1,5 +1,5 @@
 task:
-  name: do-stuff
+  name: Playground
   container:
     image: alpine:latest
   script: echo "Hello!"
