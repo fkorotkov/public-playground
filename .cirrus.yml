@@ -1,5 +1,6 @@
 task:
-  name: Playground
+  name: KVM
   container:
-    image: alpine:latest
-  script: echo "Hello!"
+    image: cirrusci/android-sdk:29
+    kvm: true
+  accel_check_script: emulator -accel-check
