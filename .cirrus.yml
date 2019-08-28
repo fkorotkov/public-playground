@@ -3,4 +3,4 @@ task:
   container:
     image: cirrusci/android-sdk:29
     kvm: true
-  accel_check_script: emulator -accel-check
+  accel_check_script: sudo emulator -accel-check
