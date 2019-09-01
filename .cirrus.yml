@@ -1,6 +1,6 @@
 task:
   name: Playground
-  skip: 'WIP' in $CIRRUS_CHANGE_MESSAGE
+  skip: "'WIP' in $CIRRUS_CHANGE_MESSAGE"
   container:
     image: alpine:latest
   script: echo "Hello!"
