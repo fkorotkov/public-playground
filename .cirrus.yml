@@ -4,5 +4,5 @@ task:
     image: cirrusci/android-sdk:29
     kvm: true
   accel_check_script:
-    - sudo chown $USER -R /dev/kvm
+    - sudo chown $USER:sudoers -R /dev/kvm
     - emulator -accel-check
