@@ -1,6 +1,5 @@
 task:
   name: Playground
-  skip: $CIRRUS_CHANGE_MESSAGE ~= '.*WIP.*'
   container:
     image: alpine:latest
-  script: echo "Hello!"
+  script: printenv
