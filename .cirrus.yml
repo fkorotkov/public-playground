@@ -1,5 +1,5 @@
 task:
   name: Playground
-  container:
-    image: alpine:latest
+  freebsd_instance:
+    image: family/freebsd-12-0
   script: printenv
