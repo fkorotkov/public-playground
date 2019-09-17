@@ -1,5 +1,4 @@
-task:
-  name: Public Playground
+alpine_arm_task:
   container:
-    image: alpine:latest
+    image: snaipe/ci-meson:alpine-armhf
   script: printenv
