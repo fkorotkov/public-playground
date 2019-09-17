@@ -1,5 +1,5 @@
 task:
-  name: Playground
+  name: Public Playground
   container:
     image: alpine:latest
   script: printenv
