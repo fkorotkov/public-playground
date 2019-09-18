@@ -2,4 +2,5 @@ task:
   name: Public Playground
   container:
     image: alpine:latest
-  script: printenv
+  allow_failures: true
+  script: exit 1
