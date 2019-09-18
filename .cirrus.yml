@@ -2,4 +2,4 @@ task:
   name: Public Playground
   container:
     image: alpine:latest
-  script: printenv
+  env_script: printenv
