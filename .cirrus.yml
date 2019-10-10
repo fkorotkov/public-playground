@@ -1,13 +1,14 @@
+container:
+  image: alpine:latest
+  cpu: 0.1
+  mmeory: 256Mb
+
 build_task:
-  container:
-    image: alpine:latest
   foo_script: echo "Foo"
-  sleep_script: sleep 120
+  sleep_script: sleep 60
 
 task:
   name: Deploy to Staging
   depends_on: build
   trigger_type: manual
-  container:
-    image: alpine:latest
   deploy_script: echo "Deploy"
