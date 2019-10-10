@@ -1,7 +1,7 @@
 container:
   image: alpine:latest
   cpu: 0.1
-  mmeory: 256Mb
+  memory: 256Mb
 
 build_task:
   foo_script: echo "Foo"
