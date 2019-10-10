@@ -2,6 +2,7 @@ build_task:
   container:
     image: alpine:latest
   foo_script: echo "Foo"
+  sleep_script: sleep 120
 
 task:
   name: Deploy to Staging
