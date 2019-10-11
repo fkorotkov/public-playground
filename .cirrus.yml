@@ -5,7 +5,7 @@ task:
     os_version: 2019
   env:
     CIRRUS_SHELL: powershell
-  script: |
-    echo 'Foo'
-    echo 'Bar'
-    echo 'Baz'
+  script:
+    - echo 'Foo'
+    - echo 'Bar'
+    - echo 'Baz'
