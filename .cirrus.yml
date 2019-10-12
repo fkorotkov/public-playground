@@ -1,5 +1,8 @@
 task:
   freebsd_instance:
     matrix:
-      image: freebsd-11-3-stable-amd64-v20190808
+      image: freebsd-13-0-snap
+      image: freebsd-12-0
+      image: freebsd-11-3
+      image: freebsd-10-4
   echo_script: echo $PATH 
