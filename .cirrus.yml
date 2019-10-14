@@ -8,4 +8,4 @@ task:
   script:
     - echo 'Foo'
     - echo 'Bar'
-    - echo 'Baz'
+    - echo 'Baz!'
