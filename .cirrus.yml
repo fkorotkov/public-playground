@@ -1,5 +1,9 @@
-task:
-  name: Public Playground
-  container:
-    image: alpine:latest
-  env_script: printenv
+container:
+  image: mysql:latest
+  additional_containers:
+    - name: mysql
+      image: mysql:latest
+      port: 3306
+      env:
+        MYSQL_ROOT_PASSWORD: ""
+  connection_script: mysql --user=root -e exit
