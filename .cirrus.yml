@@ -7,4 +7,4 @@ task:
         port: 3306
         env:
           MYSQL_ROOT_PASSWORD: ""
-  connection_script: mysql --user=root -e exit
+  connection_script: mysql --user=root --host=localhost -e exit
