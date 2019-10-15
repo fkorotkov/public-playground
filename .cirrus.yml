@@ -1,9 +1,10 @@
-container:
-  image: mysql:latest
-  additional_containers:
-    - name: mysql
-      image: mysql:latest
-      port: 3306
-      env:
-        MYSQL_ROOT_PASSWORD: ""
+task:
+  container:
+    image: mysql:latest
+    additional_containers:
+      - name: mysql
+        image: mysql:latest
+        port: 3306
+        env:
+          MYSQL_ROOT_PASSWORD: ""
   connection_script: mysql --user=root -e exit
