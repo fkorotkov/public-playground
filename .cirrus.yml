@@ -1,10 +1,12 @@
 task:
   container:
-    image: mysql:latest
+    image: redis:latest
     additional_containers:
-      - name: mysql
-        image: mysql:latest
-        port: 3306
-        env:
-          MYSQL_ROOT_PASSWORD: ""
-  connection_script: mysql --user=root --host=127.0.0.1 -e exit
+      - name: redis
+        image: redis:latest
+        port: 6379
+  script:
+    - redis-cli 
+    - redis-cli inc foo
+    - redis-cli inc foo
+    - redis-cli get foo
