@@ -5,8 +5,7 @@ task:
       - name: redis
         image: redis:latest
         port: 6379
-  script:
-    - redis-cli 
-    - redis-cli inc foo
-    - redis-cli inc foo
+  script:=
+    - redis-cli incr foo
+    - redis-cli incr foo
     - redis-cli get foo
