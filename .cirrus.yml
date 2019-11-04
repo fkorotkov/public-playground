@@ -1,5 +1,8 @@
 task:
   name: Public Playground
   osx_instance:
-    image: mojave-flutter
-  xcrun_script: xcrun simctl list
+    matrix:
+      image: mojave-flutter
+      image: mojave-xcode
+      image: mojave-base
+  df_script: df -h
