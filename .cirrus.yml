@@ -2,4 +2,6 @@ task:
   name: Public Playground
   osx_instance:
     image: mojave-xcode-11.2.1-flutter
-  env_script: flutter doctor -v
+  env_script: 
+    - sudo gem install cocoapods
+    - flutter doctor -v
