@@ -1,5 +1,5 @@
 task:
   name: Public Playground
-  container:
-    image: alpine:latest
-  env_script: printenv
+  osx_instance:
+    image: mojave-xcode-11.2.1-flutter
+  env_script: flutter doctor -vo
