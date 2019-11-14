@@ -1,5 +1,15 @@
+container:
+  image: alpine:latest
+
+main_task:
+  clone_script: echo 'clone'
+  script: sleep 5
+
 task:
-  name: Public Playground
-  container:
-    image: alpine:latest
-  env_script: printenv
+  clone_script: echo 'clone'
+  matrix:
+    name: foo
+    name: bar
+  execution_lock: lock
+  script: sleep 2
+
