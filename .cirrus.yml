@@ -1,6 +1,5 @@
 task:
   name: Public Playground
-  use_compute_credits: true
   osx_instance:
     image: mojave-xcode-10.2-flutter
   env_script: printenv
