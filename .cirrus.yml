@@ -1,5 +1,4 @@
 task:
   name: Test Things
-  container:
-    image: alpine:latest
-  env_script: printenv
+  windows_container:
+    image: cirrusci/windowsservercore:cmake
