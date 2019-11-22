@@ -2,3 +2,4 @@ task:
   name: Test Things
   windows_container:
     image: cirrusci/windowsservercore:cmake
+    os_version: 2019
