@@ -1,3 +1,3 @@
 # Public Playground
 
-Playground for testing things 😅👌🙌🤓🎉🔥
+Playground for testing different things 😅👌🙌🤓🎉🔥
