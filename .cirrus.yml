@@ -4,5 +4,5 @@ task:
     image: alpine:latest
   matrix:
     echo_script: echo "Foo"
-    echo_script: echo "Bar"
+    echo_script: echo "Baz"
   env_script: printenv
