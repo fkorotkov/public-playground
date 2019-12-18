@@ -2,4 +2,7 @@ task:
   name: Test Things
   container:
     image: alpine:latest
+  matrix:
+    echo_script: echo "Foo"
+    echo_script: echo "Bar"
   env_script: printenv
