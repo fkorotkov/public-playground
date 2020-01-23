@@ -2,4 +2,5 @@ task:
   name: Test Things
   container:
     image: alpine:latest
-  env_script: printenv
+  sleep_script: sleep 60
+  script: exit 1
