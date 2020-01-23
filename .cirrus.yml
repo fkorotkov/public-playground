@@ -2,5 +2,9 @@ task:
   name: Test Things
   osx_instance:
     image: catalina-base
-  sleep_script: sleep 60
+  version_script: 
+    - which ruby
+    - ruby --version
+    - which bundle
+    - bundle --version
   env_script: printenv
