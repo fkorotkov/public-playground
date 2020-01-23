@@ -1,5 +1,6 @@
 task:
   name: Test Things
   osx_instance:
-    image: mojave-xcode
+    image: catalina-xcode
+  sleep_script: sleep 60
   env_script: printenv
