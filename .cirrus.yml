@@ -1,3 +1,5 @@
 docker_builder:
   name: Test Things
-  test_script: python3 --version
+  test_script: 
+    - python --version
+    - python3 --version
