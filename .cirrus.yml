@@ -1,5 +1,5 @@
 task:
-  name: Test Things
+  name: Test Things 🎉
   container:
     image: alpine:latest
   env_script: printenv
