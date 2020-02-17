@@ -1,5 +1,10 @@
+container:
+  image: debian:10-slim
+
 task:
-  name: Test Things 🎉
-  container:
-    image: alpine:latest
-  env_script: printenv
+  clone_script: echo 'clone'
+  test_script:
+    - bash -c '/bin/sleep 5 & disown'
+    - ps -eo ppid,pid,user,cpu,rss,stat,start,command
+    - sleep 10
+    - ps -eo ppid,pid,user,cpu,rss,stat,start,command
