@@ -2,6 +2,7 @@ container:
   image: debian:10-slim
 
 task:
+  experimental: true
   clone_script: echo 'clone'
   dependencies_script: 
     - apt-get update
