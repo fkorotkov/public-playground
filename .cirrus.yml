@@ -1,5 +1,5 @@
 container:
-  image: debian:10-slim
+  image: alpine:latest
 
 task:
   clone_script: echo 'clone'
