@@ -3,6 +3,7 @@ container:
 
 task:
   clone_script: echo 'clone'
+  dependencies_script: apt-get install -y --no-install-recommends procps
   test_script:
     - bash -c '/bin/sleep 5 & disown'
     - ps -eo ppid,pid,user,cpu,rss,stat,start,command
