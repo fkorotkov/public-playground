@@ -1,6 +1,6 @@
 task:
   name: Test Things 🎉
   container:
-    image: alpine:latest
+    dockerfile: Dockerfile
   env_script: printenv
   sleep_script: sleep 15
