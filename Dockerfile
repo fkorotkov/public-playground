@@ -1,3 +1,3 @@
 FROM alpine:latest
 
-ENV VERSION=5
+ENV VERSION=6
