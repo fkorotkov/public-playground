@@ -1,4 +1,11 @@
 task:
   freebsd_instance:
+    image: freebsd-12-1-stable-amd64-v20200102
+    image: freebsd-12-1-stable-amd64-v20200116
+    image: freebsd-12-1-stable-amd64-v20200123
+    image: freebsd-12-1-stable-amd64-v20200130
+    image: freebsd-12-1-stable-amd64-v20200206
+    image: freebsd-12-1-stable-amd64-v20200213
+    image: freebsd-12-1-stable-amd64-v20200220
     image: freebsd-12-1-stable-amd64-v20200227
   echo_script: echo $PATH 
