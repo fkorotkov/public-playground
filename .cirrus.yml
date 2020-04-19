@@ -3,4 +3,4 @@ task:
   container:
     image: alpine:latest
   env_script: printenv
-  sleep_script: sleep 15
+  sleep_script: sleep 5
