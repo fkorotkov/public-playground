@@ -1,7 +1,8 @@
 task:
   name: Test Things
   osx_instance:
-    image: catalina-xcode-11.4-flutter
+    image: catalina-xcode-11.4.1-flutter
+  time_script: time
   version_script: 
     - which ruby
     - ruby --version
