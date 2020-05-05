@@ -1,6 +1,25 @@
+docker_builder:
+  build_script: docker --version
+
+pipe:
+  name: Pipe Testing
+  steps:
+    - image: squidfunk/mkdocs-material:latest
+      build_script: mkdocs --version
+    - image: raviqqe/liche:latest
+      validate_script: /liche --version
+
 task:
   name: Test Things 🎉
-  container:
-    image: alpine:latest
+  matrix:
+    - container:
+        image: alpine:latest
+    - container:
+        image: alpine:latest
+        kvm: true
+    - freebsd_instance:
+        image_family: freebsd-12-1
+    - windows_container:
+        image: cirrusci/windowsservercore:2019
   env_script: printenv
   sleep_script: sleep $((RANDOM % 60))
