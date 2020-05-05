@@ -4,6 +4,10 @@ task:
   stateful: true
   container:
     image: alpine:latest
+    matrix:
+      cpu: 1
+      cpu: 2
+      cpu: 4
   env:
     matrix:
       SHARD: 0
@@ -16,24 +20,4 @@ task:
       SHARD: 7
       SHARD: 8
       SHARD: 9
-      SHARD: 10
-      SHARD: 11
-      SHARD: 12
-      SHARD: 13
-      SHARD: 14
-      SHARD: 15
-      SHARD: 16
-      SHARD: 17
-      SHARD: 18
-      SHARD: 19
-      SHARD: 20
-      SHARD: 21
-      SHARD: 22
-      SHARD: 23
-      SHARD: 24
-      SHARD: 25
-      SHARD: 26
-      SHARD: 27
-      SHARD: 28
-      SHARD: 29
   sleep_script: sleep $((RANDOM % 60))
