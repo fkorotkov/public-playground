@@ -1,6 +1,7 @@
 task:
   name: Test Things 🎉
   experimental: true
+  stateful: true
   container:
     image: alpine:latest
   env:
