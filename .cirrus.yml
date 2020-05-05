@@ -1,6 +1,28 @@
 task:
   name: Test Things 🎉
+  experimental: true
   container:
     image: alpine:latest
-  env_script: printenv
+  env:
+    matrix:
+      SHARD: 0
+      SHARD: 1
+      SHARD: 2
+      SHARD: 3
+      SHARD: 4
+      SHARD: 5
+      SHARD: 6
+      SHARD: 7
+      SHARD: 8
+      SHARD: 9
+      SHARD: 10
+      SHARD: 11
+      SHARD: 12
+      SHARD: 13
+      SHARD: 14
+      SHARD: 15
+      SHARD: 16
+      SHARD: 17
+      SHARD: 18
+      SHARD: 19
   sleep_script: sleep $((RANDOM % 60))
