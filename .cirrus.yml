@@ -25,4 +25,14 @@ task:
       SHARD: 17
       SHARD: 18
       SHARD: 19
+      SHARD: 20
+      SHARD: 21
+      SHARD: 22
+      SHARD: 23
+      SHARD: 24
+      SHARD: 25
+      SHARD: 26
+      SHARD: 27
+      SHARD: 28
+      SHARD: 29
   sleep_script: sleep $((RANDOM % 60))
