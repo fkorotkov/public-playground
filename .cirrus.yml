@@ -7,7 +7,6 @@ task:
     matrix:
       cpu: 2
       cpu: 2
-      cpu: 2
   env:
     matrix:
       SHARD: 0
