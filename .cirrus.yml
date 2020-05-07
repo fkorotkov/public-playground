@@ -5,9 +5,9 @@ task:
   container:
     image: alpine:latest
     matrix:
+      cpu: 1
       cpu: 2
-      cpu: 2
-      cpu: 2
+      cpu: 3
   env:
     matrix:
       SHARD: 0
