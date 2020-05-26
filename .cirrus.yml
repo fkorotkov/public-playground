@@ -1,5 +1,5 @@
 task:
   name: Test Things 🎉
-  container:
-    image: alpine:latest
+  osx_instance:
+    image: catalina-xcode-11.5
   sleep_script: sleep $((RANDOM % 60))
