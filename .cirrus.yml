@@ -20,4 +20,4 @@ task:
       SHARD: 7
       SHARD: 8
       SHARD: 9
-  sleep_script: sleep $((RANDOM % 60))
+  sleep_script: sleep $((RANDOM % 120))
