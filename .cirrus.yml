@@ -1,5 +1,6 @@
 task:
+  experimental: true
   name: Test Things 🎉
   container:
-    image: alpine:latest
-  sleep_script: sleep $((RANDOM % 60))
+    image: ubuntu:latest
+  script: curl ifconfig.co
