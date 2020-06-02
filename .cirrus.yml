@@ -2,5 +2,5 @@ task:
   experimental: true
   name: Test Things 🎉
   container:
-    image: ubuntu:latest
+    image: curlimages/curl:latest
   script: curl ifconfig.co
