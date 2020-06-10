@@ -1,4 +1,5 @@
 task:
+  experimental: true
   name: Test Things 🎉
   osx_instance:
     image: catalina-base
