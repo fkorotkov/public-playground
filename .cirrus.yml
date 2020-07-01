@@ -1,5 +1,5 @@
 task:
   name: Test Things 🎉
   osx_instance:
-    image: catalina-xcode-11.5
+    image: catalina-xcode-11.5-flutter
   version_script: xcodebuild -version
