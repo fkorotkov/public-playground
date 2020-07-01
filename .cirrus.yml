@@ -1,5 +1,5 @@
 task:
   name: Test Things 🎉
   osx_instance:
-    image: catalina-xcode-12.0
-  sleep_script: sleep 60
+    image: catalina-xcode-11.5
+  version_script: xcodebuild -version
