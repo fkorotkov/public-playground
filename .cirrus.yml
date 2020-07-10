@@ -4,10 +4,10 @@ task:
     image: catalina-xcode
   env:
     SWIFT_DOC_VERSION: 1.0.0-beta.3
-    PATH: $PATH:$PWD/.cache/swift-doc-bin/
+    PATH: $PATH:$CIRRUS_WORKING_DIR/.cache/swift-doc-bin/
     
   swiftdoc_install_cache:
-    folder: .cache/swift-doc
+    folder: .cache/swift-doc-bin
     fingerprint_script: echo $SWIFT_DOC_VERSION
     populate_script:
       - git clone --branch $SWIFT_DOC_VERSION https://github.com/SwiftDocOrg/swift-doc.git
@@ -16,6 +16,7 @@ task:
       - popd
       - mkdir -p .cache/swift-doc-bin
       - mv swift-doc/build/bin/swift-doc .cache/swift-doc-bin/swift-doc
-      - rm -rf swift-doc
-      
-  swiftdoc_script: swift-doc --version
+      - rm -rf swift-doc    
+  swiftdoc_script:
+    - printenv
+    - swift-doc --version
