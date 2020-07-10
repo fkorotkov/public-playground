@@ -1,5 +1,21 @@
 task:
-  name: Test Things 🎉
-  container:
-    image: alpine:latest
-  sleep_script: sleep $((RANDOM % 60))
+  name: Test Swift-Doc 🎉
+  osx_instance:
+    image: catalina-xcode
+  env:
+    SWIFT_DOC_VERSION: 1.0.0-beta.3
+    PATH: $PATH:$PWD/.cache/swift-doc-bin/
+    
+  swiftdoc_install_cache:
+    folder: .cache/swift-doc
+    fingerprint_script: echo $SWIFT_DOC_VERSION
+    populate_script:
+      - git clone --branch $SWIFT_DOC_VERSION https://github.com/SwiftDocOrg/swift-doc.git
+      - pushd swift-doc
+      - make install prefix=build
+      - popd
+      - mkdir -p .cache/swift-doc-bin
+      - mv swift-doc/build/bin/swift-doc .cache/swift-doc-bin/swift-doc
+      - rm -rf swift-doc
+      
+  swiftdoc_script: swift-doc --version
