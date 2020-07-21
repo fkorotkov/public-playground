@@ -1,5 +1,6 @@
 task:
   name: Test Things 🎉
+  experimental: true
   container:
     image: alpine:latest
   sleep_script: sleep $((RANDOM % 60))
