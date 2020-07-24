@@ -1,10 +1,8 @@
 freebsd_task:
-  experimental: true
   freebsd_instance:
     image_family: freebsd-12-1
   env:
     CIRRUS_WORKING_DIR: /tmp/go/src/github.com/billziss-gh/cgofuse
     GOPATH: /tmp/go
   install_script:
-  - kldload fuse
   - pkg install -y go fusefs-libs
