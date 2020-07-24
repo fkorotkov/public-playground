@@ -1,5 +1,7 @@
 freebsd13_task:
-  experimental: true
+  matrix:
+    experimental: false
+    experimental: true
   freebsd_instance:
     image_family: freebsd-13-0-snap
   install_script: pkg install -y git bash
