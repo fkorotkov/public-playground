@@ -1,4 +1,5 @@
 freebsd_task:
+  experimental: true
   freebsd_instance:
     image_family: freebsd-12-1
   env:
