@@ -1,5 +1,5 @@
 freebsd13_task:
   experimental: true
   freebsd_instance:
-    image: freebsd-13-0-current-amd64-v20190517
+    image_family: freebsd-13-0-snap
   install_script: pkg install -y git bash
