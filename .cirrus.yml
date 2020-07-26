@@ -3,4 +3,4 @@ task:
   experimental: true
   container:
     image: alpine:latest
-  sleep_script: sleep $((RANDOM % 60))
+  sleep_script: sleep $((RANDOM % 30))
