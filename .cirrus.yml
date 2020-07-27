@@ -3,4 +3,5 @@ task:
   experimental: true
   container:
     image: alpine:latest
+    use_in_memory_disk: true
   sleep_script: sleep $((RANDOM % 30))
