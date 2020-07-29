@@ -3,9 +3,9 @@ task:
   experimental: true
   container:
     image: alpine:latest
+  result_cache:
+    folder: result
   create_script:
     - mkdir result
     - cd result
     - dd if=/dev/urandom of=data.bin bs=10M count=10
-  data_artifacts:
-    path: result/data.bin
