@@ -1,11 +1,13 @@
 task:
   name: Test Things 🎉
-  experimental: true
+  matrix:
+    experimental: true
+    experimental: false
   container:
     image: alpine:latest
   result_cache:
     folder: result
-  create_script:
-    - mkdir result
-    - cd result
-    - dd if=/dev/urandom of=data.bin bs=10M count=10
+    populate_script:
+      - mkdir result
+      - cd result
+      - dd if=/dev/urandom of=data.bin bs=10M count=10
