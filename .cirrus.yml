@@ -7,6 +7,8 @@ task:
     image: alpine:latest
   result_cache:
     folder: result
+    fingerprint_script: echo "Foo!"
+    reupload_on_changes: false
     populate_script:
       - mkdir result
       - cd result
