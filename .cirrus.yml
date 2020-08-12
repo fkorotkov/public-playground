@@ -1,6 +1,5 @@
 task:
   name: Test Things 🎉
-  experimental: true
   container:
     image: alpine:latest
   result_cache:
