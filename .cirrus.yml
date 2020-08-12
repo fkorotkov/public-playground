@@ -13,3 +13,4 @@ task:
       - mkdir result
       - cd result
       - dd if=/dev/urandom of=data.bin bs=10M count=10
+  script: echo "Some work"
