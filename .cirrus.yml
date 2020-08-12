@@ -1,6 +1,10 @@
-task:
-  name: Test Things 🎉
-  experimental: true
-  container:
-    image: alpine:latest
-  sleep_script: sleep $((RANDOM % 30))
+pipe:
+  name: "Check Behaviour"
+  steps:
+    - image: alpine:3.8.4
+      clone_script: echo 'Clone'
+      exit_script: exit 1
+    - image: alpine:3.9.4
+      foo_script: echo "Should never happen!"
+      on_failure:
+       validate_script: echo "Yo!"
