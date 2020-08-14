@@ -1,4 +1,7 @@
 freebsd13_task:
   freebsd_instance:
-    image: freebsd-11-3-release-amd64
-  install_script: pkg install -y git bash
+    image_family: freebsd-13-0-snap
+  install_script:
+    - freebsd-version
+    - pkg update -f
+    - pkg install -qy git autoconf
