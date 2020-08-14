@@ -3,5 +3,4 @@ freebsd13_task:
     image_family: freebsd-13-0-snap
   install_script:
     - freebsd-version
-    - pkg update -f
     - pkg install -qy git autoconf
