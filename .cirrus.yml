@@ -1,11 +1,7 @@
 task:
   name: Test Things
   osx_instance:
-    image: catalina-xcode-11.4.1-flutter
+    image: catalina-flutter
   date_script: date
   version_script: 
-    - which ruby
-    - ruby --version
-    - which bundle
-    - bundle --version
-  env_script: printenv
+    - flutter doctor
