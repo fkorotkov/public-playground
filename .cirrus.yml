@@ -1,6 +1,7 @@
 task:
   name: Test Things 🎉
-  experimental: true
-  container:
-    image: alpine:latest
-  sleep_script: sleep $((RANDOM % 30))
+  windows_container:
+    image: cirrusci/android-sdk:28-windowsservercore-2019
+  env:
+    COMPUTE_ENGINE_IMAGE_NAME: windows-docker-builder-v20200714
+  sleep_script: sdkmanager --help
