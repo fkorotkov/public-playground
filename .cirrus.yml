@@ -4,4 +4,4 @@ task:
     image: alpine:latest
     cpu: 0.5
     memory: 256Mb
-  exit_script: exit 10
+  exit_script: exit 11
