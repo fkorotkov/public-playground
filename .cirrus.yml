@@ -2,5 +2,6 @@ task:
   name: Test Things 🎉
   container:
     image: alpine:latest
-  sleep_script: sleep $((RANDOM % 30))
-  printenv_script: printenv
+    cpu: 0.5
+    memory: 256Mb
+  exit_script: exit 0
