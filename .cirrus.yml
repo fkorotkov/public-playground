@@ -2,5 +2,10 @@ task:
   name: Test Things 🎉
   container:
     image: alpine:latest
-  sleep_script: sleep $((RANDOM % 20))
+  env:
+    CIRRUS_LOG_TIMESTAMP: true
+  sleep_script: 
+    - echo "Hey!"
+    - sleep $((RANDOM % 20))
+    - echo "Buy!"
   printenv_script: printenv
