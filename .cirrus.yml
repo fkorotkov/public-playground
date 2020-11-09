@@ -6,6 +6,6 @@ task:
     CIRRUS_LOG_TIMESTAMP: true
   sleep_script: 
     - echo "Hey!"
-    - sleep $((RANDOM % 20))
+    - sleep $((RANDOM % 10))
     - echo "Buy!"
   printenv_script: printenv
