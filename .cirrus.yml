@@ -1,11 +1,19 @@
-task:
-  name: Test Things 🎉
-  container:
-    image: alpine:latest
-  env:
-    CIRRUS_LOG_TIMESTAMP: true
-  sleep_script: 
-    - echo "Hey!"
-    - sleep $((RANDOM % 10))
-    - echo "Buy!"
-  printenv_script: printenv
+container:
+  image: alpine:latest
+
+depends_on_foo_template: &DEPENDS_ON_TEMPLATE
+  depends_on:
+    - foo
+
+foo_task:
+  script: echo foo
+
+bar_task:
+  script: echo bar
+
+foobar_task:
+  <<: *DEPENDS_ON_TEMPLATE
+  depends_on:
+    - foo
+    - bar
+  script: echo foobar
