@@ -1,11 +1,11 @@
 task:
   name: Test Things 🎉
-  container:
-    image: alpine:latest
+  osx_instance:
+    image: catalina-xcode
   env:
     CIRRUS_LOG_TIMESTAMP: true
   sleep_script: 
     - echo "Hey!"
     - sleep $((RANDOM % 10))
     - echo "Buy!"
-  printenv_script: printenv
+  script: flutter doctor
