@@ -10,5 +10,6 @@ task:
         cpu: 2
         memory: 4G
   adb_script:
+    - adb devices
     - adb connect localhost:5555
     - adb wait-for-device
