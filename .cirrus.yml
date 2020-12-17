@@ -1,7 +1,5 @@
 task:
   name: Test Things
   osx_instance:
-    image: catalina-flutter
+    image: big-sur-base
   date_script: date
-  version_script: 
-    - flutter doctor
