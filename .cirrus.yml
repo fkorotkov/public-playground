@@ -3,7 +3,7 @@ task:
   container:
     image: alpine:latest
     cpu: 0.1
-    memmory: 128Mb
+    memory: 128Mb
   printenv_script: printenv
   sleep_script: 
     - echo "Hey!"
