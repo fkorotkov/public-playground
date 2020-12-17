@@ -2,6 +2,8 @@ task:
   name: Test Things 🎉
   container:
     image: alpine:latest
+    cpu: 0.5
+    memmory: 256Mb
   printenv_script: printenv
   sleep_script: 
     - echo "Hey!"
