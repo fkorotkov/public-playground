@@ -4,6 +4,6 @@ task:
     image: alpine:latest
   printenv_script: printenv
   sleep_script: 
-    - echo "Hey!"
+    - echo "Hello!"
     - sleep $((RANDOM % 10))
     - echo "Buy!"
