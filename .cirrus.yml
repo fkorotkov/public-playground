@@ -1,7 +1,12 @@
 task:
   name: Test Things 🎉
-  container:
-    image: alpine:latest
+  persistent_worker:
+    isolation:
+      parallels:
+        image: catalina-xcode-11.3.1
+        user: admin
+        password: admin
+        platform: darwin
   printenv_script: printenv
   sleep_script: 
     - echo "Hello!"
