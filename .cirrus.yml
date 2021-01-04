@@ -8,6 +8,7 @@ task:
         password: admin
         platform: darwin
   printenv_script: printenv
+  version_script: xcodebuild -version
   sleep_script: 
     - echo "Hello!"
     - sleep $((RANDOM % 10))
