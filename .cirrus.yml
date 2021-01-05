@@ -1,12 +1,6 @@
 task:
   name: Test Things 🎉
-  persistent_worker:
-    isolation:
-      parallels:
-        image: catalina-xcode-11.3.1
-        user: admin
-        password: admin
-        platform: darwin
+  persistent_worker: {}
   printenv_script: printenv
   version_script: xcodebuild -version
   flutter_script: flutter doctor
