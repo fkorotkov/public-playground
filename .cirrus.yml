@@ -1,5 +1,6 @@
 task:
   name: Test Things
-  osx_instance:
+  experimental: true
+  macos_instance:
     image: big-sur-xcode-12.3
   date_script: date
