@@ -1,10 +1,10 @@
 task:
   name: Test Things 🎉
-  persistent_worker: {}
+  persistent_worker:
+    isolation:
+      parallels:
+        image: big-sur-base
+        user: admin
+        password: admin
   printenv_script: printenv
-  version_script: xcodebuild -version
-  flutter_script: flutter doctor
-  sleep_script: 
-    - echo "Hello!"
-    - sleep $((RANDOM % 10))
-    - echo "Buy!"
+  version_script: sleep 300
