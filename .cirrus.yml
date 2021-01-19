@@ -6,5 +6,6 @@ task:
         image: big-sur-base
         user: admin
         password: admin
+        platform: darwin
   printenv_script: printenv
   version_script: sleep 300
