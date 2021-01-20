@@ -1,6 +1,6 @@
 task:
   name: Test Things
   macos_instance:
-    image: catalina-xcode-12.0-flutter
+    image: big-sur-xcode-12.3
   date_script: date
   script: xcrun simctl list
