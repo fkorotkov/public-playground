@@ -5,5 +5,8 @@ task:
     experimental: false
   container:
     image: ubuntu:latest
-  throughtput_script: dd if=/dev/zero of=/tmp/testfile1 bs=10G count=1 oflag=direct
-  latency_script: dd if=/dev/zero of=/tmp/testfile2 bs=512 count=10000 oflag=direct
+  write_script: sync; dd if=/dev/zero of=tempfile bs=1M count=1024; sync
+  read_cache_script: dd if=tempfile of=/dev/null bs=1M count=1024
+  read_script:
+    - sudo /sbin/sysctl -w vm.drop_caches=3
+    - dd if=tempfile of=/dev/null bs=1M count=1024
