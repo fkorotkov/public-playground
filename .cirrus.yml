@@ -4,6 +4,6 @@ task:
     experimental: true
     experimental: false
   container:
-    image: alpine:latest
+    image: ubuntu:latest
   throughtput_script: dd if=/dev/zero of=/root/testfile bs=1G count=1 oflag=direct
   latency_script: dd if=/dev/zero of=/root/testfile bs=512 count=1000 oflag=direct
