@@ -5,5 +5,5 @@ task:
     experimental: false
   container:
     image: ubuntu:latest
-  throughtput_script: dd if=/dev/zero of=/tmp/testfile1 bs=1G count=1 oflag=direct
-  latency_script: dd if=/dev/zero of=/tmp/testfile2 bs=512 count=1000 oflag=direct
+  throughtput_script: dd if=/dev/zero of=/tmp/testfile1 bs=10G count=1 oflag=direct
+  latency_script: dd if=/dev/zero of=/tmp/testfile2 bs=512 count=10000 oflag=direct
