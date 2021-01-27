@@ -5,5 +5,5 @@ task:
     experimental: false
   container:
     image: alpine:latest
-  throughtput_script: dd if=/dev/zero of=/tmp/test1.img bs=1G count=10 oflag=dsync
-  latency_script: dd if=/dev/zero of=/tmp/test2.img bs=512 count=10000 oflag=dsync
+  throughtput_script: dd if=/dev/zero of=/tmp/test1.img bs=1G count=10 oflag=direct
+  latency_script: dd if=/dev/zero of=/tmp/test2.img bs=512 count=10000 oflag=direct
