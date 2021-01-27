@@ -8,5 +8,5 @@ task:
   write_script: sync; dd if=/dev/zero of=tempfile bs=1M count=1024; sync
   read_cache_script: dd if=tempfile of=/dev/null bs=1M count=1024
   read_script:
-    - sudo /sbin/sysctl -w vm.drop_caches=3
+    - /sbin/sysctl -w vm.drop_caches=3
     - dd if=tempfile of=/dev/null bs=1M count=1024
