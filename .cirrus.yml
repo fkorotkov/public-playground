@@ -1,6 +1,6 @@
 task:
   name: Test Things
   macos_instance:
-    image: big-sur-xcode-12.3
+    image: big-sur-xcode-12.4
   date_script: date
   script: xcrun simctl list
