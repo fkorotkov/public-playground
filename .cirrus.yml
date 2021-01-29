@@ -1,5 +1,5 @@
 task:
-  name: Test Things
+  name: Test Things Again
   macos_instance:
     image: big-sur-xcode-12.4
   date_script: date
