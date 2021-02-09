@@ -5,5 +5,17 @@ task:
   printenv_script: printenv
   sleep_script: 
     - echo "Hello!"
-    - sleep $((RANDOM % 10))
+    - sleep 1
+    - sleep 1
+    - sleep 1
+    - sleep 1
+    - sleep 1
+    - sleep 1
+    - sleep 1
+    - sleep 1
+    - sleep 1
+    - sleep 1
+    - sleep 1
+    - sleep 1
     - echo "Buy!"
+    
