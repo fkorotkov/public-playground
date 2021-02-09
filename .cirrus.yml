@@ -2,6 +2,7 @@ task:
   name: Test Things 🎉
   container:
     image: alpine:latest
+  trigger_type: manual
   printenv_script: printenv
   sleep_script: 
     - echo "Hello!"
