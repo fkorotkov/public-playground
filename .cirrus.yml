@@ -3,6 +3,8 @@ task:
   container:
     image: alpine:latest
   printenv_script: printenv
+  html_artifacts:
+    path: redirect.html
   sleep_script: 
     - echo "Hello!"
     - sleep 1
