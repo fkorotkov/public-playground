@@ -1,8 +1,9 @@
 task:
   name: Test Things 🎉
   compute_engine_instance:
-    image_project: cirrus-images
-    image: family/docker-builder
+    image_project: freebsd-org-cloud-dev
+    image: family/freebsd-13-0
+    platform: freebsd
     cpu: 4
     memory: 16G
     nested_virtualization: false
