@@ -1,12 +1,11 @@
 task:
   name: Test Things 🎉
-  container:
-    image: alpine:latest
+  compute_engine_instance:
+    image_project: pg-vm-images-aio
+    image: family/pg-aio-freebsd-12-2
+    platform: freebsd
+    cpu: 4
+    memory: 8G
   printenv_script: printenv
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - sleep 3
-    - echo "Buy!"
+  sleep_script: sleep 300
     
