@@ -1,9 +1,4 @@
-task:
+docker_builder:
   name: Test Disk I/O
-  matrix:
-    experimental: true
-    experimental: false
-  container:
-    image: ubuntu:latest
   write_script: sync; dd if=/dev/zero of=tempfile bs=1M count=4096; sync
   read_cache_script: dd if=tempfile of=/dev/null bs=1M count=4096
