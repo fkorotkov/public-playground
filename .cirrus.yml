@@ -2,6 +2,6 @@ task:
   name: Test Things 🎉
   macos_instance:
     image: big-sur-xcode
-  install_script: brew install fastlane
+  install_script: sudo gem install fastlane
   version_script: fastlane --version
     
