@@ -2,5 +2,6 @@ task:
   name: Test Things 🎉
   macos_instance:
     image: big-sur-xcode
+  install_fastlane: brew install fastlane
   version_script: fastlane --version
     
