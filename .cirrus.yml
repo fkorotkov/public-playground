@@ -9,4 +9,4 @@ task:
     - sleep 2
     - sleep 3
     - echo "Buy!"
-    
+    - exit 1
