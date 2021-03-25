@@ -2,6 +2,7 @@ task:
   name: Test Things 🎉
   container:
     image: alpine:latest
+  use_compute_credits: true
   stateful: true
   printenv_script: printenv
   sleep_script: 
