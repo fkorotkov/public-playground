@@ -1,14 +1,10 @@
 task:
   name: Test Things 🎉
   container:
-    image: alpine:latest
-    cpu: 0.1
-    memory: 64Mb
-  printenv_script: printenv
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - sleep 3
-    - echo "Buy!"
+    image: ubuntu:latest
+  matrix:
+    experimental: true
+    experimental: false
+  write_script: sync; dd if=/dev/zero of=tempfile bs=1M count=4096; sync
+  read_cache_script: dd if=tempfile of=/dev/null bs=1M count=4096
     
