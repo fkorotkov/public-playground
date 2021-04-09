@@ -4,7 +4,6 @@ task:
     image: alpine:latest
     cpu: 0.1
     memory: 64Mb
-  printenv_script: printenv
   sleep_script: 
     - echo "Hello!"
     - sleep 1
