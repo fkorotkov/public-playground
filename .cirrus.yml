@@ -2,8 +2,8 @@ task:
   name: Test Things 🎉
   container:
     image: alpine:latest
-    cpu: 0.1
-    memory: 128Mb
+    cpu: 1
+    memory: 1G
   sleep_script: 
     - echo "Hello!"
     - sleep 1
