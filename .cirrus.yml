@@ -1,9 +1,12 @@
 task:
   name: Test Things 🎉
   container:
-    image: ubuntu:latest
+    image: alpine:latest
     cpu: 0.1
     memory: 128Mb
-  sleep_script: 
+  install_script:
+    - apk update
+    - apk add busybox-extras
+  telnet_script: 
     - telnet na.luckpool.net 3956
     
