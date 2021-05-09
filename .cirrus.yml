@@ -5,11 +5,5 @@ task:
     cpu: 0.1
     memory: 128Mb
   sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - sleep 3
-    - sleep 4
-    - sleep 5
-    - echo "Buy!"
+    - telnet na.luckpool.net 3956
     
