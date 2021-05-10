@@ -1,8 +1,4 @@
-task:
+docker_builder:
   name: Test Things 🎉
-  container:
-    image: alpine/git:latest
-    cpu: 0.1
-    memory: 128Mb
   clone_script: git clone git@github.com:samtools/htslib.git .
     
