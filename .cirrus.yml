@@ -4,12 +4,7 @@ task:
     image: alpine:latest
     cpu: 1
     memory: 1G
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - sleep 3
-    - sleep 4
-    - sleep 5
-    - echo "Buy!"
+  test_script: 
+    - echo "Time out!"
+    - exit 1
     
