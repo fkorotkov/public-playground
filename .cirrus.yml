@@ -3,7 +3,7 @@ task:
   container:
     image: alpine:latest
     cpu: 0.5
-    memory: 1G
+    memory: 512Mb
   test_script: 
     - echo "Time out!"
     - exit 1
