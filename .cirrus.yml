@@ -10,6 +10,5 @@ task:
     - sleep 2
     - sleep 3
     - sleep 4
-    - sleep 5
     - echo "Buy!"
     
