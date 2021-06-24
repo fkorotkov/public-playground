@@ -1,9 +1,11 @@
+azure_credentials: ENCRYPTED[ee851768a77bcc552ff3dd14a75eaad1270c61b84f86183d30b5d8dcd25081f5a1d4089c0fb2c71b3f64a2fb1294ddf0]
+
 task:
   name: Test Things 🎉
-  container:
+  azure_container_instance:
     image: alpine:latest
-    cpu: 1
-    memory: 1G
+    resource_group: CirrusCI
+    region: westus
   sleep_script: 
     - echo "Hello!"
     - sleep 1
