@@ -1,13 +1,5 @@
-task:
-  name: Test Things 🎉
-  container:
-    image: alpine:latest
-    cpu: 1
-    memory: 1G
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - sleep 3
-    - echo "Buy!"
+aws_docker_builder:
+  script:
+    - aws --version
+    - awsv2 --version
     
