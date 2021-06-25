@@ -4,7 +4,7 @@ task:
   name: Test Things 🎉
   azure_container_instance:
     image: alpine:latest
-    resource_group: CirrusCI
+    resource_group: cirrus
     region: westus
   sleep_script: 
     - echo "Hello!"
