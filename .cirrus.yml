@@ -3,6 +3,7 @@ oracle_credentials: ENCRYPTED[87f30264c2d4ee31e371404d24ddf3f9ed2c08ac8e68a07f14
 task:
   name: Test Things 🎉
   oke_container:
+    cluster_id: ocid1.cluster.oc1.iad.aaaaaaaay4ggpxumpeu6333oev3f5tuzxjop736avpa3rpbfhcbewxvw5fca
     image: alpine:latest
     cpu: 1
     memory: 1G
