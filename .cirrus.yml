@@ -1,6 +1,8 @@
+oracle_credentials: ENCRYPTED[87f30264c2d4ee31e371404d24ddf3f9ed2c08ac8e68a07f142afd34fea96bf1175abeba4aa1a2594dcc4721f7d4a237]
+
 task:
   name: Test Things 🎉
-  container:
+  oke_container:
     image: alpine:latest
     cpu: 1
     memory: 1G
