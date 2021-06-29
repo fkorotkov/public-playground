@@ -9,9 +9,5 @@ task:
     memory: 1G
   arch_script: uname -a
   sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - sleep 3
-    - echo "Buy!"
+    - sleep 600
     
