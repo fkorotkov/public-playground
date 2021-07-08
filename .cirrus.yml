@@ -1,9 +1,9 @@
 task:
   name: Test Greedy 🎉
   container:
-    image: containerstack/cpustress
+    image: containerstack/cpustress:latest
     cpu: 1
     memory: 1G
-    greedy
+    greedy: true
   stress_script: stress-ng --cpu 4 --timeout 180
     
