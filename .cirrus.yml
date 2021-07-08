@@ -1,13 +1,9 @@
 task:
-  name: Test Things 🎉
+  name: Test Greedy 🎉
   container:
-    image: alpine:latest
+    image: containerstack/cpustress
     cpu: 1
     memory: 1G
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - sleep 3
-    - echo "Buy!"
+    greedy
+  stress_script: stress-ng --cpu 4 --timeout 180
     
