@@ -1,5 +1,6 @@
 task:
   name: Test Greedy 🎉
+  timeout_in: 3m
   container:
     image: containerstack/cpustress:latest
     cpu: 1
