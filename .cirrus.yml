@@ -1,9 +1,9 @@
 task:
   name: Test Things 🎉
-  container:
-    image: alpine:latest
-    cpu: 1
-    memory: 1G
+  compute_engine_instance:
+    image_project: cirrus-images
+    image: family/docker-builder-next
+    platform: linux 
   sleep_script: 
     - echo "Hello!"
     - sleep 1
