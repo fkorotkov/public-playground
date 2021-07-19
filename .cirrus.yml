@@ -1,9 +1,8 @@
 task:
   name: Test Things Again
   macos_instance:
-    image: big-sur-xcode-12.5
+    image: big-sur-xcode-12.4
   date_script: date
   script:
     - flutter doctor
-    - xcodebuild -version
-    - xcrun simctl list
+    - java -version
