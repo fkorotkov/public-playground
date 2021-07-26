@@ -1,9 +1,10 @@
 task:
   name: Test Things 🎉
-  container:
+  arm_container:
     image: alpine:latest
     cpu: 1
     memory: 1G
+  arch_script: uname -a
   sleep_script: 
     - echo "Hello!"
     - sleep 1
