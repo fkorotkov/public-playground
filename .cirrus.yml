@@ -8,7 +8,7 @@ task:
   cache:
     name: My Fancy Cache
     folder: my-caches
-    fingerprint_key: test-key
+    fingerprint_key: my-test-key
     reupload_on_changes: true
     populate_script:
       - mkdir -p my-caches/sub/sub/folder
