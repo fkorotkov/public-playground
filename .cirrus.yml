@@ -1,13 +1,19 @@
+
+container:
+  image: alpine:latest
+  cpu: 1
+  memory: 1G
+    
 task:
-  name: Test Things 🎉
-  container:
-    image: alpine:latest
-    cpu: 1
-    memory: 1G
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - sleep 3
-    - echo "Buy!"
+  clone_script: echo 'clone'
+  cache:
+    name: My Fancy Cache
+    folder: my-caches
+    fingerprint_key: my-test-key-amd64
+    reupload_on_changes: true
+    populate_script:
+      - mkdir -p my-caches/sub/sub/folder
+      - echo 'hello caches!' >> my-caches/super_cache.txt
+  dirty_script: echo $CIRRUS_TASK_ID >> my-caches/sub/sub/folder/sub_cache.txt
+  verify_script: cat my-caches/super_cache.txt my-caches/sub/sub/folder/sub_cache.txt
     
