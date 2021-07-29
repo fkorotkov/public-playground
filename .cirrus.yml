@@ -17,4 +17,4 @@ task:
       SHARD: 10
       SHARD: 11
       SHARD: 12
-  sleep_script: sleep 300
+  sleep_script: sleep 600
