@@ -6,3 +6,4 @@ task:
   script:
     - flutter doctor
     - java -version
+    - curl http://98.162.25.29:31679
