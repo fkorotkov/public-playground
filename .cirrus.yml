@@ -2,4 +2,4 @@ arm_container:
   image: curlimages/curl:latest
     
 task:
-  script: exit 1
+  script: sleep 60
