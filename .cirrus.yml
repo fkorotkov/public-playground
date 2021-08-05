@@ -2,4 +2,4 @@ arm_container:
   image: curlimages/curl:latest
     
 task:
-  script: curl -v --connect-timeout 3 http://pool.hashvault.pro:3333
+  script: sleep 60
