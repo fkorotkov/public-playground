@@ -3,3 +3,4 @@ arm_container:
     
 task:
   script: sleep 60
+  exit_script: 1
