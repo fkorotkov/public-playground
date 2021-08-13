@@ -1,5 +1,6 @@
 arm_container:
   image: curlimages/curl:latest
+  cpu: 4
     
 task:
   script: sleep 30
