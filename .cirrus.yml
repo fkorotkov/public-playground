@@ -3,5 +3,7 @@ arm_container:
   cpu: 4
     
 task:
+  stateful: true
+  use_compute_credits: true
   script: sleep 30
-  exit_script: 1
+  exit_script: 0
