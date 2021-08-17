@@ -1,7 +1,7 @@
 task:
   name: Test Things 🎉
   container:
-    dockerfile: .ci/Dockerfile
+    dockerfile: .ci/Dockerfile.linux
   printenv_script: printenv
   sleep_script: 
     - echo "Hello!"
