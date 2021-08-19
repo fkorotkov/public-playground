@@ -1,13 +1,6 @@
-task:
-  name: Test Things 🎉
-  container:
-    image: alpine:latest
-    cpu: 0.5
-    memory: 256Mb
-  depends_on: Non existing name
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - echo "Buy!"
+container:
+  image: debian:latest
+
+task_foo:
+  script: uname -a
     
