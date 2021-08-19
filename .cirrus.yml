@@ -1,6 +1,6 @@
 container:
   image: debian:latest
 
-task_foo:
+task_fooz:
   script: uname -a
     
