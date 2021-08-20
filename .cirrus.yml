@@ -1,6 +1,5 @@
 arm_container:
-  image: curlimages/curl:latest
-  cpu: 4
+  image: cirrusci/android-sdk:29
     
 task:
   stateful: true
