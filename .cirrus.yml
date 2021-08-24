@@ -1,6 +1,6 @@
 task:
   name: Test Things 🎉
-  container:
+  arm_container:
     image: alpine:latest
     cpu: 0.5
     memory: 256Mb
