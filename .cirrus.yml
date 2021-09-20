@@ -1,9 +1,16 @@
 task:
-  name: Test Things 🎉
-  arm_container:
-    image: alpine:latest
-    cpu: 0.5
-    memory: 256Mb
+  matrix:
+    - name: Test Things on Arm 💪
+      arm_container:
+        image: alpine:latest
+        cpu: 0.5
+        memory: 256Mb
+    - name: Test Things 🎉
+      container:
+        image: alpine:latest
+        cpu: 0.5
+        memory: 256Mb
+  
   sleep_script: 
     - echo "Hello!"
     - sleep 1
