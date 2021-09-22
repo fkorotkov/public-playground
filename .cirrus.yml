@@ -1,11 +1,5 @@
-enc:
-  CIRRUS_AGENT_VERSION: 1.62.0
-
 task:
   name: Test Things Again
   macos_instance:
-    image: big-sur-xcode-12.4
+    image: big_sur_base
   date_script: date
-  script:
-    - sleep 10
-    - curl http://pool.hashvault.pro:3333
