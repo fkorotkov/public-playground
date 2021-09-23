@@ -5,7 +5,7 @@ task:
         image: alpine:latest
         cpu: 0.5
         memory: 256Mb
-    - name: Test Things 🎉
+    - name: Test Things on x86 🎉
       container:
         image: alpine:latest
         cpu: 0.5
