@@ -15,5 +15,5 @@ task:
     - echo "Hello!"
     - sleep 1
     - sleep 2
-    - echo "Buy!"
+    - echo "Bye!"
     
