@@ -3,4 +3,4 @@ task:
   macos_instance:
     matrix:
       image: big-sur-xcode-13
-  date_script: futter doctor
+  date_script: flutter doctor
