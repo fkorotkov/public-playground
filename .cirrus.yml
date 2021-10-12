@@ -2,6 +2,5 @@ task:
   name: Test Things Again
   macos_instance:
     matrix:
-      image: big-sur-base
-      image: big-sur-xcode
-  date_script: date
+      image: big-sur-xcode-13
+  date_script: futter doctor
