@@ -1,7 +1,7 @@
 dig_task:
   container:
     image: alpine:latest
-  install_script: apt update && apt install dnsutils
+  install_script: apk add --no-cache bind-tools
   dig_script: 
     - dig -x 1.1.1.1
     
