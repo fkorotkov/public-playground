@@ -1,14 +1,7 @@
-task:
-  matrix:
-    - name: Test Things on x86 🎉
-      container:
-        image: alpine:latest
-    - name: Test Things on Arm 🎉
-      arm_container:
-        image: alpine:latest
+dig_task:
+  container:
+    image: ubunut:latest
   
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 4
-    - echo "Bye!"
+  dig_script: 
+    - dig -x 1.1.1.1
     
