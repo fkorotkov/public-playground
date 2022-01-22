@@ -1,6 +1,6 @@
 dig_task:
   container:
-    image: ubunut:latest
+    image: ubuntu:latest
   
   dig_script: 
     - dig -x 1.1.1.1
