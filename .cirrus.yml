@@ -2,14 +2,13 @@ azure_credentials: ENCRYPTED[707dd01c64856bfa9417bedf09a3ef7f96b9bd2d94b9e250432
 
 task:
   name: Test Things 🎉
-  azure_container_instance:
-    image: alpine:latest
-    resource_group: cirrus
+  azure_instance:
+    image_reference:
+      publisher: MicrosoftWindowsDesktop
+      offer: Windows-10
+      sku: 20h1-pro
     region: westus
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 2
-    - sleep 3
-    - echo "Buy!"
+    platform: windows
+  script: 
+    - ps: Get-Location
     
