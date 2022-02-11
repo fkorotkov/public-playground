@@ -3,7 +3,8 @@ task:
   container:
     image: bufbuild/buf:latest
   lint_script: buf lint --error-format=json > lint.report.json
-  report_artifacts:
-    path: lint.report.json
-    format: buf
+  on_failure:
+    report_artifacts:
+      path: lint.report.json
+      format: buf
     
