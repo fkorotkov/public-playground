@@ -1,25 +1,7 @@
 task:
-  name: Test Things 🎉
+  name: Test Windows 2022 🎉
   compute_engine_instance:
-    image_project: freebsd-org-cloud-dev
-    image: family/freebsd-13-0
-    platform: freebsd
-    cpu: 4
-    memory: 16G
-    nested_virtualization: false
-  printenv_script: printenv
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 1
-    - sleep 1
-    - sleep 1
-    - sleep 1
-    - sleep 1
-    - sleep 1
-    - sleep 1
-    - sleep 1
-    - sleep 1
-    - sleep 1
-    - sleep 1
-    - echo "Buy!"
+    image_project: windows-cloud
+    image: family/windows-2022
+    platform: windows
     
