@@ -1,6 +1,5 @@
 freebsd13_task:
   freebsd_instance:
-    image_family: freebsd-13-0-snap
-  install_script:
+    image: freebsd-14-0-current-amd64-v20220414
+  script:
     - freebsd-version
-    - pkg install -qy git autoconf
