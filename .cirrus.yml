@@ -2,5 +2,5 @@ task:
   name: Test Things Again
   macos_instance:
     matrix:
-      image: monterey-xcode-13.2
+      image: monterey-xcode
   date_script: flutter doctor
