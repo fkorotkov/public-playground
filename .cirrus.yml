@@ -3,4 +3,4 @@ task:
   macos_instance:
     matrix:
       image: monterey-xcode
-  date_script: flutter doctor
+  script: exit 0
