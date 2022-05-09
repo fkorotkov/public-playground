@@ -1,6 +1,6 @@
 task:
   macos_instance:
-    iamge: ghcr.io/cirruslabs/macos-monterey-base:latest
+    image: ghcr.io/cirruslabs/macos-monterey-base:latest
   
   sleep_script: 
     - echo "Hello!"
