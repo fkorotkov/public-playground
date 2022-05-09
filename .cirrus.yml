@@ -1,9 +1,7 @@
 task:
   macos_instance:
-    image: ghcr.io/cirruslabs/macos-monterey-base:latest
+    image: ghcr.io/cirruslabs/macos-monterey-xcode:latest
   
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 5
-    - echo "Bye!"
+  doctor_script: flutter doctor
+ 
     
