@@ -1,11 +1,6 @@
 task:
-  matrix:
-    - name: Test Things on x86 🎉
-      container:
-        image: alpine:latest
-    - name: Test Things on Arm 🎉
-      arm_container:
-        image: alpine:latest
+  macos_instance:
+    iamge: docker pull ghcr.io/cirruslabs/macos-monterey-base:latest
   
   sleep_script: 
     - echo "Hello!"
