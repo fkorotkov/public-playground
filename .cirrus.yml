@@ -1,6 +1,6 @@
 task:
   macos_instance:
-    iamge: docker pull ghcr.io/cirruslabs/macos-monterey-base:latest
+    iamge: ghcr.io/cirruslabs/macos-monterey-base:latest
   
   sleep_script: 
     - echo "Hello!"
