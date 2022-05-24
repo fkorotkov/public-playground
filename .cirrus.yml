@@ -1,12 +1,14 @@
+env:
+  USER: user
+  PASSWORD: ENCRYPTED[f42526a372dec61582365a878fdef2096289e8fbd07aba04dd676f1ceaffa9671413b434c4402ec45ce5adaead8484c5]
+
 task:
-  matrix:
-    - name: Test Things on x86 🎉
-      container:
-        image: alpine:latest
-    - name: Test Things on Arm 🎉
-      arm_container:
-        image: alpine:latest
-  
+  container:
+    dockerfile: Dockerfile
+    docker_arguments:
+      USER: $USER
+      PASSWORD: $PASSWORD
+
   sleep_script: 
     - echo "Hello!"
     - sleep 5
