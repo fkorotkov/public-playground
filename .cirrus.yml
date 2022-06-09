@@ -1,8 +1,8 @@
-task:
+docker_builder:
   name: Test Things 🎉
-  compute_engine_instance:
-    image_project: cirrus-images
-    image: family/docker-builder
-    platform: linux 
   version_script: docker --version
-    
+  setup_script:
+    - docker buildx create --name multibuilder
+    - docker buildx use multibuilder
+    - docker buildx inspect --bootstrap
+  build_script: docker buildx build --platform linux/amd64,linux/arm64 .
