@@ -1,7 +1,7 @@
 task:
   windows_container:
     image: cirrusci/windowsservercore:visualstudio2019-2021.12.07
-  install_script: choco install nodejs
+  install_script: choco install nodejs -y
   version_script:
     - refreshenv
     - npm --version
