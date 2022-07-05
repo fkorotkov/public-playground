@@ -1,16 +1,16 @@
-env:
-  USER: user
-  PASSWORD: ENCRYPTED[f42526a372dec61582365a878fdef2096289e8fbd07aba04dd676f1ceaffa9671413b434c4402ec45ce5adaead8484c5]
+aws_credentials: ENCRYPTED[c3a6337e976cae5c986b17ee7bd8afb87aaa9665c17c25d2aa990049779ac1a257a3d9dd99d98b63e8d503ed37dfdd07]
 
 task:
-  container:
+  name: Test Things on EKS 🎉
+  eks_container:
+    region: us-east-2
+    cluster_name: cirrus-arm-cluster
     dockerfile: Dockerfile
-    docker_arguments:
-      USER: $USER
-      PASSWORD: $PASSWORD
+    builder_image: ami-00db9b7f2cdd0cbad
+    builder_role: AmazonEC2ContainerRegistryFullAccess
+    builder_instance_type: c7g.xlarge
 
-  sleep_script: 
+  sleep_script:
     - echo "Hello!"
     - sleep 5
     - echo "Bye!"
-    
