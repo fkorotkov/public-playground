@@ -9,6 +9,7 @@ task:
     builder_image: ami-0ea01e64891fb03be
     builder_role: cirrus-builder
     builder_instance_type: c7g.xlarge
+    architecture: arm64
 
   sleep_script:
     - echo "Hello!"
