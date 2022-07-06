@@ -6,7 +6,7 @@ task:
     region: us-east-2
     cluster_name: cirrus-arm-cluster
     dockerfile: Dockerfile
-    builder_image: ami-00db9b7f2cdd0cbad
+    builder_image: ami-0656f8e7f3f221345
     builder_role: AmazonEC2ContainerRegistryFullAccess
     builder_instance_type: c7g.xlarge
 
