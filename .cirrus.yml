@@ -9,6 +9,6 @@ task:
   
   sleep_script: 
     - echo "Hello!"
-    - sleep 10
+    - sleep 5
     - echo "Bye!"
     
