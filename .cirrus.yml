@@ -1,4 +1,8 @@
 docker_builder:
+  env:
+    matrix:
+      CIRRUS_ARCH: amd64
+      CIRRUS_ARCH: arm64
   arch_script: uname -m
   sleep_script: 
     - echo "Hello!"
