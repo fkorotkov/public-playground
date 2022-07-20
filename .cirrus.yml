@@ -7,7 +7,7 @@ task:
     cluster_name: cirrus-arm-cluster
     dockerfile: Dockerfile
     builder_image: ami-0ea01e64891fb03be
-    builder_role: cirrus-builder-TEST
+    builder_role: cirrus-builder-test
     builder_instance_type: c7g.xlarge
     architecture: arm64
 
