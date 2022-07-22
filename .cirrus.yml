@@ -9,5 +9,6 @@ example_task:
         memory: 512Mi
         env:
           MYSQL_ROOT_PASSWORD: ""
-  version_script: mysqladmin version -h 127.0.0.1
+  wait_script: wait 120
+  version_script: mysqladmin version -h localhost
     
