@@ -1,12 +1,15 @@
+gcp_credentials:
+  workload_identity_provider: projects/118978861190/locations/global/workloadIdentityPools/ci-pool/providers/cirrus-ci-provider
+  service_account: cirrus-ci@cirruslabs-ci.iam.gserviceaccount.com
+
+gce_instance:
+  image_project: cirrus-images
+  image_family: docker-builder
+  zone: us-central1-a
+  type: c2-standard-4
+  use_ssd: true
+
 task:
-  matrix:
-    - name: Test Things on x86 🎉
-      container:
-        image: alpine:latest
-    - name: Test Things on Arm 🎉
-      arm_container:
-        image: alpine:latest
-  
   sleep_script: 
     - echo "Hello!"
     - sleep 10
