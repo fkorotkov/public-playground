@@ -1,3 +1,3 @@
 FROM alpine:latest
 
-ENV TEST=1
+ENV TEST=3
