@@ -1,5 +1,5 @@
 gcp_credentials:
-  workload_identity_provider: projects/118978861190/locations/global/workloadIdentityPools/ci-pool/providers/cirrus-ci-provider
+  workload_identity_provider: projects/118978861190/locations/global/workloadIdentityPools/ci-pool/providers/cirrus-ci
   service_account: cirrus-ci@cirruslabs-ci.iam.gserviceaccount.com
 
 gce_instance:
