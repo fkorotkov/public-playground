@@ -2,7 +2,7 @@ aws_credentials: ENCRYPTED[c3a6337e976cae5c986b17ee7bd8afb87aaa9665c17c25d2aa990
     
 ec2_task:
   ec2_instance:
-    image: ami-0065b187ab4b6018a
+    image: ami-073a06fe642e0b4e9
     region: us-east-2
     type: t2.xlarge
   script: echo %PATH%
