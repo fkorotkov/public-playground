@@ -4,4 +4,5 @@ ec2_task:
   ec2_instance:
     image: ami-0065b187ab4b6018a
     region: us-east-2
+    type: t2.xlarge
   script: echo %PATH%
