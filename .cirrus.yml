@@ -1,14 +1,7 @@
-task:
-  matrix:
-    - name: Test Things on x86 🎉
-      container:
-        image: alpine:latest
-    - name: Test Things on Arm 🎉
-      arm_container:
-        image: alpine:latest
-  
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 11
-    - echo "Bye!"
+aws_credentials: ENCRYPTED[c3a6337e976cae5c986b17ee7bd8afb87aaa9665c17c25d2aa990049779ac1a257a3d9dd99d98b63e8d503ed37dfdd07]
     
+ec2_task:
+  ec2_instance:
+    image: ami-0065b187ab4b6018a
+    region: us-east-2
+  script: echo %PATH%
