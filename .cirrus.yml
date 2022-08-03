@@ -1,4 +1,5 @@
-aws_credentials: ENCRYPTED[c3a6337e976cae5c986b17ee7bd8afb87aaa9665c17c25d2aa990049779ac1a257a3d9dd99d98b63e8d503ed37dfdd07]
+aws_credentials:
+  role_arn: arn:aws:iam::471777771536:role/CirrusOIDCTest-Role-1H7XA69P793Q5
     
 ec2_task:
   ec2_instance:
