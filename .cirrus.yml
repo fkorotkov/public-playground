@@ -1,7 +1,7 @@
 task:
   matrix:
-    - name: Test Things on x86 🎉
-      container:
+    - name: Test Things
+      arm_container:
         image: alpine:latest
   
   oidc_script: 
