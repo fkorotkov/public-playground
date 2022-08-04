@@ -1,6 +1,6 @@
 aws_credentials:
   role_arn: arn:aws:iam::471777771536:role/CirrusTest3-Role-BX3Y3TKOYTPQ
-  role_session: cirrus
+  role_session_name: cirrus
   region: us-east-2
     
 ec2_task:
