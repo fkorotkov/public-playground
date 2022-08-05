@@ -1,4 +1,5 @@
 docker_builder:
   platform: windows
   os_version: 2019
-  script: docker --version
+  version_script: docker --version
+  type_script: type %USERPROFILE%\.docker\config.json
