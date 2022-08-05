@@ -1,4 +1,4 @@
 docker_builder:
   platform: windows
   os_version: 2019
-  script: echo %PATH%
+  script: docker --version
