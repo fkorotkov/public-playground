@@ -5,7 +5,7 @@ aws_credentials:
     
 ec2_task:
   ec2_instance:
-    image: /aws/service/ecs/optimized-ami/amazon-linux-2/arm64/recommended
+    image: ubuntu/images/*ubuntu-jammy-22.04-arm64-server-*
     architecture: arm64
     region: us-east-2
     type: a1.metal
