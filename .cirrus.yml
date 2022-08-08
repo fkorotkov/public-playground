@@ -4,5 +4,4 @@ docker_builder:
   version_script: docker --version
   type_script: 
     - echo %username%
-    - gcloud auth configure-docker gcr.io
     - type %USERPROFILE%\.docker\config.json
