@@ -1,0 +1,3 @@
+FROM cirrusci/android-sdk:tools-windowsservercore-2019
+
+ENV FOO foo
