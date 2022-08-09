@@ -4,9 +4,10 @@ aws_credentials:
   region: us-east-2
     
 ec2_task:
+  experimental: true
   ec2_instance:
     image: ubuntu/images/*ubuntu-jammy-22.04-arm64-server-*
     architecture: arm64
     region: us-east-2
     type: a1.metal
-  script: echo %PATH%
+  script: printenv
