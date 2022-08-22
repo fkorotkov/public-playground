@@ -1,11 +1,9 @@
 task:
-  matrix:
-    - name: Test Things on x86 🎉
-      container:
-        image: alpine:latest
-    - name: Test Things on Arm 🎉
-      arm_container:
-        image: alpine:latest
+  compute_engine_instance:
+    image_project: cirrus-images
+    image: family/docker-builder-arm64
+    architecture: arm64
+    platform: linux
   
   sleep_script: 
     - echo "Hello!"
