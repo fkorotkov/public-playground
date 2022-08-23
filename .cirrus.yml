@@ -1,5 +1,5 @@
 task:
   name: Test Things Again
   macos_instance:
-    image: ghcr.io/cirruslabs/macos-monterey-xcode:latest
+    image: ghcr.io/cirruslabs/macos-monterey-xcode:13.4.1
   script: exit 0
