@@ -1,8 +1,7 @@
 task:
-  name: KVM
+  name: Integration Tests (x86)
   container:
-    image: cirrusci/android-sdk:29
+    image: cirrusci/android-sdk:30
     kvm: true
-  accel_check_script:
-    - sudo chown cirrus:cirrus /dev/kvm
-    - emulator -accel-check
+  kvm_script: sudo chown cirrus:cirrus /dev/kvm
+  accel_check_script: emulator -accel-check
