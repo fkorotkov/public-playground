@@ -3,5 +3,4 @@ task:
   container:
     image: cirrusci/android-sdk:30
     kvm: true
-  kvm_script: sudo chown cirrus:cirrus /dev/kvm
   accel_check_script: emulator -accel-check
