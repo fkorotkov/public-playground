@@ -2,6 +2,7 @@ container:
   image: cirrusci/android-sdk:30
   cpu: 4
   memory: 12G
+  kvm: true
 
 check_android_task:
   install_emulator_script:
