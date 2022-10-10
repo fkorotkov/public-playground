@@ -13,5 +13,6 @@ example_task:
           DOCKER_TLS_CERTDIR: ""
   env:
     DOCKER_HOST: tcp://localhost:2375
+  sleep_script: sleep 30 # so docker starts
   script: docker run ubuntu echo hello
     
