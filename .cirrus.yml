@@ -1,17 +1,14 @@
 example_task:
-  # also happens for `container` though that isn't as important
-  # because `docker_builder` exists
   container:
     image: docker:latest
     kvm: true
     additional_containers:
       - name: dockerdaemon
-        cpu: 4
-        memory: 3G
         image: docker:dind
         port: 2375
         env:
           DOCKER_DRIVER: overlay2
+          DOCKER_TLS_CERTDIR: ""
   env:
     DOCKER_HOST: tcp://localhost:2375
   sleep_script: sleep 30
