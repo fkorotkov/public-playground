@@ -3,9 +3,9 @@ example_task:
   # because `docker_builder` exists
   container:
     image: docker:latest
+    privileged: true
     additional_containers:
       - name: dockerdaemon
-        privileged: true
         cpu: 4
         memory: 3500Mb
         image: docker:dind
