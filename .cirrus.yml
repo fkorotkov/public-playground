@@ -3,7 +3,7 @@ example_task:
   # because `docker_builder` exists
   container:
     image: docker:latest
-    privileged: true
+    kvm: true
     additional_containers:
       - name: dockerdaemon
         cpu: 4
