@@ -7,7 +7,7 @@ example_task:
     additional_containers:
       - name: dockerdaemon
         cpu: 4
-        memory: 3500Mb
+        memory: 3G
         image: docker:dind
         port: 2375
         env:
