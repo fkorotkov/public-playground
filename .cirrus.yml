@@ -2,4 +2,4 @@ task:
   name: Test Things Again
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: sleep 10
+  script: sleep 20
