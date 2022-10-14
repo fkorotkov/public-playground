@@ -1,6 +1,6 @@
-task:
-  windows_container:
-    dockerfile: ci/Dockerfile.windows
+docker_builder:
+  platform: windows
+  os_version: 2019
   version_script: docker --version
   type_script: 
     - echo %username%
