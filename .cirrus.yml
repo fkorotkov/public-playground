@@ -1,6 +1,13 @@
 task:
-  name: Test Things Again
+  name: Test Things Again 1
   experimental: true
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: sleep 20
+  script: sleep 120
+  
+task:
+  name: Test Things Again 2
+  experimental: true
+  macos_instance:
+    image: ghcr.io/cirruslabs/macos-ventura-base:latest
+  script: sleep 120
