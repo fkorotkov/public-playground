@@ -6,7 +6,7 @@ task:
     - name: Test Things on Arm 🎉
       arm_container:
         image: alpine:latest
-  
+  build_script: echo $CIRRUS_BUILD_NUMBER
   sleep_script: 
     - echo "Hello!"
     - sleep 10
