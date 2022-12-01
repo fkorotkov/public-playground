@@ -1,7 +1,10 @@
 task:
   name: Test Things 🎉
-  container:
-    dockerfile: .ci/Dockerfile.linux
+  matrix:
+    - container:
+        dockerfile: .ci/Dockerfile.linux
+    - arm_container:
+        dockerfile: .ci/Dockerfile.linux
   printenv_script: printenv
   sleep_script: 
     - echo "Hello!"
