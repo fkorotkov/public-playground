@@ -3,11 +3,11 @@ task:
   experimental: true
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: sleep 200
+  script: sleep 10
   
 task:
   name: Test Things Again 2
   experimental: true
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: sleep 300
+  script: sleep 20
