@@ -1,13 +1,13 @@
 task:
-  name: Test Things Again 1
+  name: Test Softnet
   experimental: true
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: sleep 10
+  script: networkQuality
   
 task:
-  name: Test Things Again 2
+  name: Test Regular
   experimental: true
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: sleep 20
+  script: networkQuality
