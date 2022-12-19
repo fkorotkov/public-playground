@@ -1,13 +1,5 @@
 task:
   name: Test Softnet
-  experimental: true
-  macos_instance:
-    image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: networkQuality
-  
-task:
-  name: Test Regular
-  experimental: true
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
   script: networkQuality
