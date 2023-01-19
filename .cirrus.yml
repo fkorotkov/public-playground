@@ -9,6 +9,6 @@ task:
   build_script: echo $CIRRUS_BUILD_NUMBER
   sleep_script: 
     - echo "Hello!"
-    - sleep 15
+    - sleep 10
     - echo "Bye!"
     
