@@ -9,5 +9,6 @@ ec2_task:
     image: ubuntu/images/*ubuntu-jammy-22.04-arm64-server-*
     architecture: arm64
     region: us-east-2
+    spot: true
     type: a1.metal
   script: printenv
