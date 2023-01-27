@@ -8,4 +8,5 @@ task:
   sleep_script: 
     - echo "Hello!"
     - echo "Bye!"
+  env_script: printenv
     
