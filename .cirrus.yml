@@ -3,7 +3,7 @@ task:
   container:
     image: ubuntu:20.04
     kvm: true
-    cpu: 8
+    cpu: 4
     memory: 16G
   sleep_script: 
     - echo "Hello!"
