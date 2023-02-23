@@ -11,4 +11,7 @@ ec2_task:
     region: us-east-2
     spot: true
     type: a1.metal
-  script: printenv
+  touch_script: touch zero.txt
+  junit_artifacts:
+      path: "zero.txt"
+    
