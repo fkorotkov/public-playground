@@ -12,7 +12,8 @@ task:
     builder_instance_type: c7g.xlarge
     architecture: arm64
 
-  sleep_script:
-    - echo "Hello!"
-    - sleep 9
-    - echo "Bye!"
+
+  touch_script: touch zero.txt
+  junit_artifacts:
+      path: "zero.txt"
+    
