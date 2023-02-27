@@ -2,10 +2,15 @@ task:
   matrix:
     - name: Test Things on x86 🎉
       container:
-        image: alpine:latest
+        image: golang:latest
     - name: Test Things on Arm 🎉
       arm_container:
-        image: alpine:latest
+        image: golang:latest
+  measure_script:
+    - COMMIT_TIMESTAMP=$(git log -1 --format=%ct)
+    - NOW_TIMESTAMP=$(date +%s)
+    - DURATION=`expr $NOW_TIMESTAMP - $COMMIT_TIMESTAMP`
+    - echo "Duration to start: $DURATION"
   build_script: echo $CIRRUS_BUILD_NUMBER
   sleep_script: 
     - echo "Hello!"
