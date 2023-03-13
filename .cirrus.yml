@@ -10,9 +10,5 @@ ec2_task:
     architecture: arm64
     region: us-east-2
     type: a1.medium
-    block_device_mappings:
-      - device_name: /dev/root
-        ebs:
-          volume_size: 100
-  script: df
+  script: lsblk
     
