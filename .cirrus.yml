@@ -10,7 +10,5 @@ ec2_task:
     architecture: arm64
     region: us-east-2
     type: a1.medium
-  touch_script: touch zero.txt
-  junit_artifacts:
-      path: "zero.txt"
+  script: df
     
