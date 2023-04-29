@@ -1,5 +1,7 @@
 task:
   name: Test Softnet
+  env:
+    CIRRUS_DISPLAY: 2000x1000
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: networkQuality
+  script: system_profiler SPDisplaysDataType | grep Resolution
