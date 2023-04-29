@@ -4,4 +4,4 @@ task:
     CIRRUS_DISPLAY: 2000x1000
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: system_profiler SPDisplaysDataType | grep Resolution
+  script: system_profiler SPDisplaysDataType
