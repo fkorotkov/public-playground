@@ -4,4 +4,6 @@ task:
     CIRRUS_DISPLAY: 2000x1000
   macos_instance:
     image: ghcr.io/cirruslabs/macos-ventura-base:latest
-  script: system_profiler SPDisplaysDataType
+  script:
+    - brew tap jakehilborn/jakehilborn && brew install displayplacer
+    - displayplacer list
