@@ -2,6 +2,6 @@ docker_builder:
   platform: windows
   os_version: 2019
   version_script: docker --version
-  type_script: 
+  echo_script: 
     - echo %username%
     - type %USERPROFILE%\.docker\config.json
