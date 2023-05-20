@@ -10,5 +10,5 @@ ec2_task:
     architecture: arm64
     region: us-east-2
     type: a1.medium
-  script: lsblk
+  script: printenv
     
