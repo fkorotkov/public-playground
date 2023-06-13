@@ -1,5 +1,4 @@
 task:
-  experimental: true
   matrix:
     - name: Test Things on x86 🎉
       container:
