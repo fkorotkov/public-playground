@@ -15,6 +15,6 @@ task:
   sleep_script: |
     for i in {1..7}
     do
-       sleep i
+       sleep $i
        echo "Step $i"
     done
