@@ -12,8 +12,9 @@ task:
     - DURATION=`expr $NOW_TIMESTAMP - $COMMIT_TIMESTAMP`
     - echo "Duration to start: $DURATION"
   build_script: echo $CIRRUS_BUILD_NUMBER
-  sleep_script: 
-    - echo "Hello!"
-    - sleep 10
-    - echo "Bye!"
-    
+  sleep_script: |
+    for i in {1..7}
+    do
+       sleep i
+       echo "Step $i"
+    done
