@@ -13,7 +13,7 @@ task:
     - echo "Duration to start: $DURATION"
   build_script: echo $CIRRUS_BUILD_NUMBER
   sleep_script: |
-    for i in {1..8}
+    for i in {1..6}
     do
        sleep $i
        echo "Step $i"
