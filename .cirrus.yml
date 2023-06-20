@@ -1,20 +1,5 @@
 task:
-  matrix:
-    - name: Test Things on x86 🎉
-      container:
-        image: golang:latest
-    - name: Test Things on Arm 🎉
-      arm_container:
-        image: golang:latest
-  measure_script:
-    - COMMIT_TIMESTAMP=$(git log -1 --format=%ct)
-    - NOW_TIMESTAMP=$(date +%s)
-    - DURATION=`expr $NOW_TIMESTAMP - $COMMIT_TIMESTAMP`
-    - echo "Duration to start: $DURATION"
-  build_script: echo $CIRRUS_BUILD_NUMBER
-  sleep_script: |
-    for i in {1..6}
-    do
-       sleep $i
-       echo "Step $i"
-    done
+  name: Test Things on Arm 🎉
+  arm_container:
+    image: curl:latest
+  test_script: curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
