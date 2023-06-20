@@ -7,5 +7,5 @@ task:
     image: curlimages/curl
   try_script: curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
   always:
-    sleep_script: sleep 60
+    sleep_script: sleep 20
     try2_script: curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
