@@ -1,5 +1,7 @@
 task:
   name: Test Things on Arm 🎉
   arm_container:
-    image: curl:latest
+    image: curlimages/curl
+    cpu: 0.5
+    memroy: 256Mb
   test_script: curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
