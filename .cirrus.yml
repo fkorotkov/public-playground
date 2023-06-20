@@ -1,11 +1,11 @@
 task:
-  name: Test Things on Arm 🎉
+  name: Test Things on $CIRRUS_ARCH 🎉
   matrix:
-    experimental: true
-    experimental: false
-  arm_container:
-    image: curlimages/curl
-  try_script: curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
+    arm_container:
+      image: curlimages/curl:latest
+    container:
+      image: curlimages/curl:latest
+  try1_script: curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
   always:
     sleep_script: sleep 20
     try2_script: curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
