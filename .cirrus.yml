@@ -1,6 +1,8 @@
 task:
   name: Test Things on Arm 🎉
-  experimental: true
+  matrix:
+    experimental: true
+    experimental: false
   arm_container:
     image: curlimages/curl
     cpu: 0.5
