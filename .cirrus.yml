@@ -3,5 +3,5 @@ task:
   arm_container:
     image: curlimages/curl
     cpu: 0.5
-    memroy: 256Mb
+    memory: 256Mb
   test_script: curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
