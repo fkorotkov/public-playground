@@ -5,6 +5,7 @@ task:
     arm_container:
       image: curlimages/curl:latest
       cpu: 0.5
+      memory: 1G
   try1_script: 
     - curl ifconfig.me
     - echo ""
