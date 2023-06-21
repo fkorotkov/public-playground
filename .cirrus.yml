@@ -4,6 +4,7 @@ task:
   matrix:
     arm_container:
       image: curlimages/curl:latest
+      cpu: 0.5
   try1_script: 
     - curl ifconfig.me
     - echo ""
