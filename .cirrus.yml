@@ -1,9 +1,8 @@
 task:
   name: Test Things on $CIRRUS_ARCH 🎉
+  experimental: true
   matrix:
     arm_container:
-      image: curlimages/curl:latest
-    container:
       image: curlimages/curl:latest
   try1_script: 
     - curl ifconfig.me
