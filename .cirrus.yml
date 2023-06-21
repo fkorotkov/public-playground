@@ -6,9 +6,11 @@ task:
       image: curlimages/curl:latest
   try1_script: 
     - curl ifconfig.me
+    - echo ""
     - curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
   always:
     sleep_script: sleep 20
     try2_script: 
       - curl ifconfig.me
+      - echo ""
       - curl --verbose https://rvm.io/images/rvm-logo-all-happy.png -O
