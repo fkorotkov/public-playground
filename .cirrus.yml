@@ -13,6 +13,7 @@ task:
     - DURATION=`expr $NOW_TIMESTAMP - $COMMIT_TIMESTAMP`
     - echo "Duration to start: $DURATION"
   build_script: echo $CIRRUS_BUILD_NUMBER
+  time_script: date +%s
   sleep_script: |
     for i in {1..6}
     do
