@@ -6,6 +6,6 @@ docker_builder:
   arch_script: uname -m
   sleep_script: 
     - echo "Hello!"
-    - sleep 5
+    - sleep 10
     - echo "Bye!"
     
