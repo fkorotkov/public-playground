@@ -1,10 +1,22 @@
 task:
-  container:
-    image: alpine:latest
-  change_dir_script:
-    - mkdir -p foo
-    - cd foo
-    - echo "Hello, Bar!" >> bar.txt
-    - echo "CIRRUS_WORKING_DIR=$CIRRUS_WORKING_DIR/foo" >> $CIRRUS_ENV
-  print_script:
-    - cat bar.txt
+  use_compute_credits: true
+  matrix:
+    - name: Test Things on x86 🎉
+      container:
+        image: golang:latest
+    - name: Test Things on Arm 🎉
+      arm_container:
+        image: golang:latest
+  measure_script:
+    - COMMIT_TIMESTAMP=$(git log -1 --format=%ct)
+    - NOW_TIMESTAMP=$(date +%s)
+    - DURATION=`expr $NOW_TIMESTAMP - $COMMIT_TIMESTAMP`
+    - echo "Duration to start: $DURATION"
+  build_script: echo $CIRRUS_BUILD_NUMBER
+  time_script: date +%s
+  sleep_script: |
+    for i in {1..6}
+    do
+       sleep $i
+       echo "Step $i"
+    done
