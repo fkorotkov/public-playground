@@ -1,3 +1,7 @@
 foo_task:
+  container:
+    image: alpine:latest
+    cpu: 0.25
+    memory: 256Mb
   trigger_type: manual
   script: exit 1
