@@ -2,3 +2,4 @@ task:
   container:
     image: ubuntu:22.04
   update_script: apt-get update
+  sleep_script: sleep 60
