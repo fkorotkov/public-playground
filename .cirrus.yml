@@ -1,5 +1,5 @@
 task:
-  use_compute_credits: true
+  experimental: true
   matrix:
     - name: Test Things on x86 🎉
       container:
