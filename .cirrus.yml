@@ -1,7 +1,7 @@
 container:
   image: smartrent/elixir-ci:1.14.3-erlang-25.2-alpine-3.16.3
 
-reproduce_base:
+reproduce_task:
   container:
     cpu: 2 # default is 2cpu, 4gb for the main container and 0.5 cpu, 512Mi for additional containers
     memory: 4G
