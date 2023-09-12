@@ -1,22 +1,48 @@
-task:
-  experimental: true
-  matrix:
-    - name: Test Things on x86 🎉
-      container:
-        image: golang:latest
-    - name: Test Things on Arm 🎉
-      arm_container:
-        image: golang:latest
-  measure_script:
-    - COMMIT_TIMESTAMP=$(git log -1 --format=%ct)
-    - NOW_TIMESTAMP=$(date +%s)
-    - DURATION=`expr $NOW_TIMESTAMP - $COMMIT_TIMESTAMP`
-    - echo "Duration to start: $DURATION"
-  build_script: echo $CIRRUS_BUILD_NUMBER
-  time_script: date +%s
-  sleep_script: |
-    for i in {1..5}
-    do
-       sleep $i
-       echo "Step $i"
-    done
+container:
+  image: smartrent/elixir-ci:1.14.3-erlang-25.2-alpine-3.16.3
+
+reproduce_base:
+  container:
+    cpu: 2 # default is 2cpu, 4gb for the main container and 0.5 cpu, 512Mi for additional containers
+    memory: 4G
+    additional_containers:
+      - name: postgres
+        image: postgres:14.8-alpine
+        cpu: 2
+        memory: 8G
+        port: 5432
+        env:
+          POSTGRES_USER: db
+          POSTGRES_PASSWORD: db
+          POSTGRES_DB: db
+      - name: redis
+        image: redis:7-alpine
+        cpu: 0.5
+        memory: 1G
+        port: 6379
+      - name: opensearch
+        image: public.ecr.aws/opensearchproject/opensearch:2.9.0
+        memory: 4G
+        ports:
+          - 9200
+          - 9600
+        env:
+          discovery.type: single-node
+  env:
+    DATABASE_URL: postgres://db:db@localhost:5432/db
+    REPLICA_DATABASE_URL: postgres://readonly:readonly@localhost:5432/db
+    ACTIVITY_DATABASE_URL: postgres://db:db@localhost:5432/activity
+    OBAN_DATABASE_URL: postgres://db:db@localhost:5432/oban
+    REDIS_URL: redis://localhost:6379
+    SHELL: /bin/sh
+    MAX_TEST_THREADS: 4
+    OPENSEARCH_BASE_URL: https://localhost:9200
+    OPENSEARCH_USERNAME: admin
+    OPENSEARCH_PASSWORD: admin
+  script:
+    - timeout 60 sh -c 'until nc -z $0 $1; do sleep 0.5; done' localhost 5432
+    - timeout 60 sh -c 'until nc -z $0 $1; do sleep 0.5; done' localhost 6379
+    - timeout 60 sh -c 'until nc -z $0 $1; do sleep 0.5; done' localhost 9200
+    - psql postgres://db:db@localhost:5432/db < ./apps/control_room/priv/repo/init.sql
+    - mix do ecto.drop, ecto.create, control_room.migrate
+    - mix do opensearch.migrate
