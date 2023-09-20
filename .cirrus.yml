@@ -1,7 +1,7 @@
 task:
   name: Test DNS
   macos_instance:
-    image: ghcr.io/cirruslabs/macos-ventura-xcode:latest
+    image: ghcr.io/cirruslabs/macos-sonoma-xcode:latest
   script:
     - networksetup -getdnsservers Ethernet
     - sudo networksetup -setdnsservers Ethernet "Empty"
