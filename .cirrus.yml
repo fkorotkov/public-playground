@@ -4,6 +4,7 @@ task:
   macos_instance:
     image: ghcr.io/cirruslabs/macos-sonoma-xcode:latest
   script:
+    - uname -a
     - networksetup -getdnsservers Ethernet
     - sudo networksetup -setdnsservers Ethernet "Empty"
     - networksetup -getdnsservers Ethernet
