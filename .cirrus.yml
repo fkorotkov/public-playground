@@ -24,7 +24,7 @@ task:
 finisher_task:
   depends_on: tests
   container:
-    image: alpine:latest
+    image: golang:latest
   sleep_script: |
     for i in {1..5}
     do
