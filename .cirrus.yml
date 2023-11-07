@@ -20,14 +20,3 @@ task:
        sleep $i
        echo "Step $i"
     done
-
-finisher_task:
-  depends_on: tests
-  container:
-    image: golang:latest
-  sleep_script: |
-    for i in {1..10}
-    do
-       sleep $i
-       echo "Step $i"
-    done
