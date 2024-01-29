@@ -4,4 +4,4 @@ foo_task:
     cpu: 0.25
     memory: 256Mb
   trigger_type: manual
-  script: exit 1
+  script: exit 0
