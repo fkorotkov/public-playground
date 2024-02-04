@@ -2,7 +2,7 @@ task:
   name: Test DNS
   use_compute_credits: true 
   macos_instance:
-    image: ghcr.io/cirruslabs/macos-sonoma-xcode:latest
+    image: ghcr.io/cirruslabs/macos-sonoma-base:latest
   script:
     - uname -a
     - networksetup -getdnsservers Ethernet
