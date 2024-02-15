@@ -1,7 +1,12 @@
+container:
+  image: alpine:latest
+  cpu: 0.25
+  memory: 256Mb
+
 foo_task:
-  container:
-    image: alpine:latest
-    cpu: 0.25
-    memory: 256Mb
   trigger_type: manual
+  script: exit 0
+
+bar_task:
+  depends_on: foo
   script: exit 0
