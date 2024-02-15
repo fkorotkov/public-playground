@@ -1,7 +1,7 @@
 container:
   image: alpine:latest
   cpu: 0.25
-  memory: 512Mb
+  memory: 256Mb
 
 foo_task:
   trigger_type: manual
