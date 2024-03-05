@@ -15,7 +15,7 @@ task:
   build_script: echo $CIRRUS_BUILD_NUMBER
   time_script: date +%s
   sleep_script: |
-    for i in {1..8}
+    for i in {1..9}
     do
        sleep $i
        echo "Step $i"
