@@ -2,5 +2,5 @@ task:
   name: Test DNS
   use_compute_credits: true 
   macos_instance:
-    image: ghcr.io/cirruslabs/macos-sonoma-xcode:latest
+    image: ghcr.io/cirruslabs/macos-sonoma-runner:latest
   script: m4 --help
