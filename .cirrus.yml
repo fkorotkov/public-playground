@@ -4,4 +4,5 @@ task:
   macos_instance:
     image: ghcr.io/cirruslabs/macos-sonoma-base:latest
   brew_config_script: brew config
+  xcode_select_script: xcode-select -p
   script: m4 --help
