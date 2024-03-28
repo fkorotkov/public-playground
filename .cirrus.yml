@@ -4,7 +4,4 @@ task:
   macos_instance:
     image: ghcr.io/cirruslabs/macos-sonoma-base:latest
   script:
-    - uname -a
-    - networksetup -getdnsservers Ethernet
-    - sudo networksetup -setdnsservers Ethernet "Empty"
-    - networksetup -getdnsservers Ethernet
+    - m4 --help
