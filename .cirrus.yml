@@ -3,5 +3,5 @@ task:
   use_compute_credits: true 
   macos_instance:
     image: ghcr.io/cirruslabs/macos-sonoma-base:latest
-  brew_config_script: brew install m4
+  brew_config_script: brew reinstall m4
   script: m4 --help
