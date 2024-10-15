@@ -5,8 +5,8 @@ task:
       CIRRUS_CLI_VERSION: "0.123.0"
       CIRRUS_CLI_VERSION: "0.130.1"
   name: Test Curl $CIRRUS_CLI_VERSION
-    container:
-      image: alpine/curl
+  container:
+    image: alpine/curl
   post_script:
     - echo "test" >> test.txt
     - curl -s -X POST --data-binary @test.txt http://${CIRRUS_HTTP_CACHE_HOST}/${CIRRUS_BUILD_ID}/test.txt
