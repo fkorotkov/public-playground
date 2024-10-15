@@ -2,5 +2,5 @@ task:
   matrix:
     - name: Test curl
       container:
-        image: curl:latest
+        image: alpine/curl
   post_script: curl -s -X POST --data-binary @not-exists.txz http://${CIRRUS_HTTP_CACHE_HOST}/${CIRRUS_BUILD_ID}/no.txz
