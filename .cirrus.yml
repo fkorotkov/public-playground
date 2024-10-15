@@ -1,6 +1,22 @@
 task:
+  alias: tests
   matrix:
-    - name: Test curl
+    - name: Test Things on x86 🎉
       container:
-        image: alpine/curl
-  post_script: curl -s -X POST --data-binary @not-exists.txz http://${CIRRUS_HTTP_CACHE_HOST}/${CIRRUS_BUILD_ID}/no.txz
+        image: golang:latest
+    - name: Test Things on Arm 🎉
+      arm_container:
+        image: golang:latest
+  measure_script:
+    - COMMIT_TIMESTAMP=$(git log -1 --format=%ct)
+    - NOW_TIMESTAMP=$(date +%s)
+    - DURATION=`expr $NOW_TIMESTAMP - $COMMIT_TIMESTAMP`
+    - echo "Duration to start: $DURATION"
+  build_script: echo $CIRRUS_BUILD_NUMBER
+  time_script: date +%s
+  sleep_script: |
+    for i in {1..9}
+    do
+       sleep $i
+       echo "Step $i"
+    done
