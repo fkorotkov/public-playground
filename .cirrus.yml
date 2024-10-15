@@ -3,7 +3,7 @@ task:
   env:
     matrix:
       CIRRUS_CLI_VERSION: "0.127.1"
-      CIRRUS_CLI_VERSION: "0.128.0"
+      CIRRUS_CLI_VERSION: "0.130.2"
   name: Test Curl $CIRRUS_CLI_VERSION
   container:
     image: alpine/curl
