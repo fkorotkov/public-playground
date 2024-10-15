@@ -2,8 +2,8 @@ task:
   alias: tests
   env:
     matrix:
-      CIRRUS_CLI_VERSION: "0.123.0"
-      CIRRUS_CLI_VERSION: "0.130.1"
+      CIRRUS_CLI_VERSION: "0.127.1"
+      CIRRUS_CLI_VERSION: "0.128.0"
   name: Test Curl $CIRRUS_CLI_VERSION
   container:
     image: alpine/curl
