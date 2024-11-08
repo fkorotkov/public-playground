@@ -6,5 +6,4 @@ foo_task:
   script: exit 0
 
 bar_task:
-  depends_on: foo
   script: exit 0
