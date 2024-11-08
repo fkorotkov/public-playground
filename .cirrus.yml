@@ -6,4 +6,4 @@ foo_task:
   script: exit 0
 
 bar_task:
-  script: exit 0
+  script: exit 1
