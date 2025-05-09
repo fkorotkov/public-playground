@@ -12,16 +12,4 @@ task:
     fingerprint_script: echo $RANDOM
     populate_script: mkdir -p test && echo $RANDOM > test/random.txt
     optimistically_restore_on_miss: true
-  measure_script:
-    - COMMIT_TIMESTAMP=$(git log -1 --format=%ct)
-    - NOW_TIMESTAMP=$(date +%s)
-    - DURATION=`expr $NOW_TIMESTAMP - $COMMIT_TIMESTAMP`
-    - echo "Duration to start: $DURATION"
   build_script: echo $CIRRUS_BUILD_NUMBER
-  time_script: date +%s
-  sleep_script: |
-    for i in {1..9}
-    do
-       sleep $i
-       echo "Step $i"
-    done
