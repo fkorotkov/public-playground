@@ -7,7 +7,7 @@ task:
     - name: Test Things on Arm 🎉
       arm_container:
         image: golang:latest
-  optimistic_cache:
+  optimistic_test_cache:
     folder: test
     fingerprint_script: echo $RANDOM
     populate_script: mkdir -p test && echo $RANDOM > test/random.txt
