@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  # schedule:
+   # - cron: "*/60 * * * *"
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  macos:
+    name: "Run"
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: ["ghcr.io/cirruslabs/macos-runner:sequoia"]
+    runs-on: ["${{ matrix.runner }}"]
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: uptime
+        run: uptime
+      - name: List Installed Xcodes
+        run: xcodes installed
+      - name: Select Xcode 16.4
+        run: sudo xcodes select 16.4
+      - name: Sleep
+        run: sleep 300
