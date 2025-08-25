@@ -1,9 +1,5 @@
 task:
-  name: Test Cache
-  experimental: true 
+  name: Test
   macos_instance:
-    image: ghcr.io/cirruslabs/macos-sonoma-runner:latest
-  test_cache:
-    folder: foo
-    download:
-      - xcodebuild -downloadComponent MetalToolchain
+    image: ghcr.io/cirruslabs/macos-runner:sonoma
+  download_script: xcodebuild -downloadComponent MetalToolchain
