@@ -5,9 +5,5 @@ task:
     image: ghcr.io/cirruslabs/macos-sonoma-runner:latest
   test_cache:
     folder: foo
-    fingerprint_script:
-      - echo $CIRRUS_OS
-    populate_script: 
-      - mkdir foo
-      - cd foo
-      - date >> date.txt
+    download:
+      - xcodebuild -downloadComponent MetalToolchain
