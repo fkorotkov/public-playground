@@ -1,5 +1,6 @@
 task:
   alias: tests
+  needs_approval: true
   matrix:
     - name: Test Things on x86 🎉
       container:
